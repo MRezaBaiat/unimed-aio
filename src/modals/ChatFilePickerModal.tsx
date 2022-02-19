@@ -7,12 +7,10 @@ import AppTouchable from '../components/base/app-touchable/AppTouchable';
 import AppImageView from '../components/base/app-image/app-imageview';
 import AppTextView from '../components/base/app-text-view/AppTextView';
 import * as DocumentPicker from 'expo-document-picker';
-import * as ImagePicker from 'expo-image-picker';
-import { MediaTypeOptions } from 'expo-image-picker/src/ImagePicker.types';
 import R from '../assets/R';
 import FileAsset from '../helpers/file-manager/FileAsset';
 import AppModal from '../components/base/app-modal/AppModal';
-import { openCameraPicker, openImagePicker } from '../helpers';
+import { openCameraPicker, openImagePicker } from '../helpers/FilePickers';
 
 interface Props {
   onRequestClose: () => void;

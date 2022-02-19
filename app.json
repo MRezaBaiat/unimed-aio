@@ -1,4 +1,5 @@
 {
+  "name": "unimed",
   "expo": {
     "name": "unimed",
     "slug": "unimed",
@@ -33,6 +34,5 @@
       "startUrl": ".",
       "scope": "."
     }
-  },
-  "name": "unimed"
+  }
 }

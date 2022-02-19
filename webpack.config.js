@@ -4,7 +4,6 @@ const { GenerateSW, GenerateSWOptions } = require('workbox-webpack-plugin');
 const path = require('path');
 const createWebpackConfigAsync = require('@expo/webpack-config');
 const webpack = require('webpack');
-
 // custom plugins usage at https://developers.google.com/web/tools/workbox/guides/using-plugins#custom_plugins
 // causes all get requests (event to the api !) to be cached
 const runTimeCache = {

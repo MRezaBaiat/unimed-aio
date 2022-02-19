@@ -5,86 +5,8 @@ import { Linking, Platform, StyleProp, TextStyle, ViewStyle } from 'react-native
 import React from 'react';
 import * as Device from 'expo-device';
 import Storage from './Storage';
-import * as WebImagePicker from 'expo-image-picker';
-import MobileImagePicker from 'react-native-image-crop-picker';
-import { MediaTypeOptions } from 'expo-image-picker/src/ImagePicker.types';
-import FileAsset from './file-manager/FileAsset';
 import { DeviceType } from 'expo-device';
 import axios, { AxiosError } from 'axios';
-
-export function openImagePicker(): Promise<FileAsset | undefined> {
-  if (Platform.OS === 'web') {
-    return WebImagePicker.launchImageLibraryAsync({
-      allowsEditing: false,
-      allowsMultipleSelection: false,
-      mediaTypes: MediaTypeOptions.Images,
-      quality: 0.5,
-    })
-      .then(async (res) => {
-        if (res.cancelled) {
-          return undefined;
-        }
-        return await FileAsset.create(res.uri, { type: ChatType.IMAGE, mediaInfo: { width: res.width, height: res.height } });
-      })
-      .catch((e) => {
-        console.log(e);
-        return undefined;
-      });
-  } else {
-    return MobileImagePicker.openPicker({
-      multiple: false,
-      maxFiles: 1,
-      compressImageMaxWidth: 700,
-      compressImageMaxHeight: 700,
-      compressImageQuality: 0.5,
-      mediaType: 'photo',
-    })
-      .then(async (res) => {
-        return await FileAsset.create(res.path, { type: ChatType.IMAGE, mediaInfo: { width: res.width, height: res.height } });
-      })
-      .catch((e) => {
-        console.log(e);
-        return undefined;
-      });
-  }
-}
-
-export function openCameraPicker(): Promise<FileAsset | undefined> {
-  if (Platform.OS === 'web') {
-    return WebImagePicker.launchCameraAsync({
-      allowsEditing: false,
-      allowsMultipleSelection: false,
-      mediaTypes: MediaTypeOptions.Images,
-      quality: 0.5,
-    })
-      .then(async (res) => {
-        if (res.cancelled) {
-          return undefined;
-        }
-        return await FileAsset.create(res.uri, { type: ChatType.IMAGE, mediaInfo: { width: res.width, height: res.height } });
-      })
-      .catch((e) => {
-        console.log(e);
-        return undefined;
-      });
-  } else {
-    return MobileImagePicker.openCamera({
-      multiple: false,
-      maxFiles: 1,
-      compressImageQuality: 0.5,
-      compressImageMaxWidth: 700,
-      compressImageMaxHeight: 700,
-      mediaType: 'photo',
-    })
-      .then(async (res) => {
-        return await FileAsset.create(res.path, { type: ChatType.IMAGE, mediaInfo: { width: res.width, height: res.height } });
-      })
-      .catch((e) => {
-        console.log(e);
-        return undefined;
-      });
-  }
-}
 
 export function replaceArabicChars(text: string) {
   if (!text) {
