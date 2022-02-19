@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1070287198148",
+    "project_id": "unimed-8d288",
+    "storage_bucket": "unimed-8d288.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1070287198148:android:ff6ac14245c2576a763691",
+        "android_client_info": {
+          "package_name": "com.unimed"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1070287198148-1pnjf4lp35jfp156b37pbml2vs3ojk0c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.unimed",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "1070287198148-k7l8p4h8qjbf0ovoust8om7vb0td1o6p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBe-oTh8_K_Chf4RxQAE9sXmOkBccehE5M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1070287198148-k7l8p4h8qjbf0ovoust8om7vb0td1o6p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

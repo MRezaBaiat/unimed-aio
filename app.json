@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "unimed",
+    "slug": "unimed",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "icon": "./src/assets/images/art/arm.png",
+    "primaryColor": "#ffffff",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "android": {
+      "package": "com.unimed"
+    },
+    "ios": {
+      "bundleIdentifier": "com.unimed"
+    },
+    "web": {
+      "favicon": "./src/assets/images/art/arm.png",
+      "preferRelatedApplications": false,
+      "name": "Unimed",
+      "shortName": "Unimed",
+      "backgroundColor": "#ffffff",
+      "themeColor": "#ffffff",
+      "description": "PWA version of Unimed",
+      "display": "standalone",
+      "lang": "fa",
+      "orientation": "portrait-primary",
+      "startUrl": ".",
+      "scope": "."
+    }
+  },
+  "name": "unimed"
+}

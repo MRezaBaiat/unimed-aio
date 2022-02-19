@@ -1,0 +1,46 @@
+{
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "plugins": ["react", "@typescript-eslint", "prettier", "react-hooks"],
+  "env": {
+    "es6": true,
+    "browser": true,
+    "jest": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "camelcase": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "react/function-component-definition": ["off"],
+    "import/prefer-default-export": ["off"],
+    "react/display-name": "off",
+    "import/extensions": ["off"],
+    "react/jsx-props-no-spreading": ["off"],
+    "react/require-default-props": ["off"],
+    "@typescript-eslint/ban-ts-comment": "off",
+    "no-param-reassign": ["off"],
+    "import/no-extraneous-dependencies": ["off"],
+    "react/style-prop-object": ["off"],
+    "import/no-unresolved": ["off"],
+    "react/jsx-filename-extension": ["error", { "extensions": [".ts", ".tsx"] }],
+    "consistent-return": "off",
+    "class-methods-use-this": "off",
+    "no-empty-function": "warn",
+    "prettier/prettier": [
+      "error",
+      {
+        "printWidth": 500,
+        "endOfLine": "auto",
+        "singleQuote": true
+      }
+    ]
+  },
+  "ignorePatterns": ["metro.config.js","webpack.config.js", "babel.config.js", "jest","node_modules"]
+}

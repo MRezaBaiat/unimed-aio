@@ -1,0 +1,199 @@
+/**
+ * Persian Calendar Picker Component
+ *
+ * Copyright 2016 Reza (github.com/rghorbani)
+ * Licensed under the terms of the MIT license. See LICENSE file in the project root for terms.
+ *
+ * @flow
+ */
+
+const DEFAULT_SELECTED_BACKGROUND_COLOR = '#50BCBD';
+const DEFAULT_SELECTED_TEXT_COLOR = '#FFFFFF';
+const DEFAULT_TODAY_BACKGROUND_COLOR = '#CCCCCC';
+
+function getBorderRadiusByShape(scaler, dayShape) {
+  if (dayShape === 'square') {
+    return 0;
+  } else {
+    return 30 * scaler;
+  }
+}
+
+function makeStyles({ isRTL, initialScale: scaler, backgroundColor, textColor, todayBackgroundColor, dayShape }) {
+  const SELECTED_BG_COLOR = backgroundColor || DEFAULT_SELECTED_BACKGROUND_COLOR;
+  const SELECTED_TEXT_COLOR = textColor || DEFAULT_SELECTED_TEXT_COLOR;
+  const TODAY_BG_COLOR = todayBackgroundColor || DEFAULT_TODAY_BACKGROUND_COLOR;
+
+  return {
+    calendar: {
+      height: 320 * scaler,
+      marginTop: 10 * scaler,
+    },
+
+    dayButton: {
+      width: 30 * scaler,
+      height: 30 * scaler,
+      borderRadius: getBorderRadiusByShape(scaler, dayShape),
+      alignSelf: 'center',
+      justifyContent: 'center',
+    },
+
+    dayLabel: {
+      fontSize: 10 * scaler,
+      color: '#000',
+      alignSelf: 'center',
+    },
+
+    selectedDayLabel: {
+      color: SELECTED_TEXT_COLOR,
+    },
+    selectedDaysLabel: {
+      color: '#38488A',
+    },
+
+    dayLabelsWrapper: {
+      flexDirection: isRTL ? 'row-reverse' : 'row',
+      paddingTop: 10 * scaler,
+      paddingBottom: 10 * scaler,
+      alignSelf: 'center',
+      justifyContent: 'center',
+      backgroundColor: '#F2F2F2',
+    },
+
+    daysWrapper: {
+      alignSelf: 'center',
+      justifyContent: 'center',
+    },
+
+    dayLabels: {
+      width: 50 * scaler,
+      fontSize: 12 * scaler,
+      color: '#000',
+      textAlign: 'center',
+    },
+
+    selectedDay: {
+      width: 30 * scaler,
+      height: 30 * scaler,
+      borderRadius: getBorderRadiusByShape(scaler, dayShape),
+      alignSelf: 'center',
+      justifyContent: 'center',
+    },
+
+    selectedDays: {
+      width: 30 * scaler,
+      height: 30 * scaler,
+      borderRadius: getBorderRadiusByShape(scaler, dayShape),
+      alignSelf: 'center',
+      justifyContent: 'center',
+    },
+
+    selectedDayBackground: {
+      backgroundColor: SELECTED_BG_COLOR,
+    },
+
+    selectedToday: {
+      width: 30 * scaler,
+      height: 30 * scaler,
+      backgroundColor: TODAY_BG_COLOR,
+      borderRadius: getBorderRadiusByShape(scaler, dayShape),
+      alignSelf: 'center',
+      justifyContent: 'center',
+    },
+
+    dayWrapper: {
+      alignItems: 'center',
+      justifyContent: 'center',
+      width: 50 * scaler,
+      height: 40 * scaler,
+      backgroundColor: 'rgba(0, 0, 0, 0.0)',
+    },
+
+    startDayWrapper: {
+      width: 50 * scaler,
+      height: 30 * scaler,
+      borderTopLeftRadius: isRTL ? 0 : 20 * scaler,
+      borderBottomLeftRadius: isRTL ? 0 : 20 * scaler,
+      borderTopRightRadius: isRTL ? 20 * scaler : 0,
+      borderBottomRightRadius: isRTL ? 20 * scaler : 0,
+      backgroundColor: SELECTED_BG_COLOR,
+      alignSelf: 'center',
+      justifyContent: 'center',
+    },
+
+    endDayWrapper: {
+      width: 50 * scaler,
+      height: 30 * scaler,
+      borderTopRightRadius: isRTL ? 0 : 20 * scaler,
+      borderBottomRightRadius: isRTL ? 0 : 20 * scaler,
+      borderTopLeftRadius: isRTL ? 20 * scaler : 0,
+      borderBottomLeftRadius: isRTL ? 20 * scaler : 0,
+      backgroundColor: SELECTED_BG_COLOR,
+      alignSelf: 'center',
+      justifyContent: 'center',
+    },
+
+    inRangeDay: {
+      width: 50 * scaler,
+      height: 30 * scaler,
+      backgroundColor: SELECTED_BG_COLOR,
+      alignSelf: 'center',
+      justifyContent: 'center',
+    },
+
+    monthLabel: {
+      fontSize: 16 * scaler,
+      color: '#000',
+      marginBottom: 10 * scaler,
+      width: 180 * scaler,
+      textAlign: 'center',
+    },
+
+    headerWrapper: {
+      alignItems: 'center',
+      flexDirection: isRTL ? 'row-reverse' : 'row',
+      alignSelf: 'center',
+      padding: 5 * scaler,
+      paddingBottom: 3 * scaler,
+      backgroundColor: 'rgba(0, 0, 0, 0.0)',
+    },
+
+    monthSelector: {
+      marginBottom: 10 * scaler,
+      fontSize: 14 * scaler,
+      width: 80 * scaler,
+    },
+
+    prev: {
+      textAlign: isRTL ? 'right' : 'left',
+    },
+
+    next: {
+      textAlign: isRTL ? 'left' : 'right',
+    },
+
+    yearLabel: {
+      fontSize: 14 * scaler,
+      fontWeight: 'bold',
+      color: '#000',
+      textAlign: 'center',
+    },
+
+    weeks: {
+      flexDirection: 'column',
+    },
+
+    weekRow: {
+      flexDirection: isRTL ? 'row-reverse' : 'row',
+    },
+
+    disabledText: {
+      fontSize: 14 * scaler,
+      color: '#BBBBBB',
+      alignSelf: 'center',
+      justifyContent: 'center',
+    },
+  };
+}
+
+export default makeStyles;

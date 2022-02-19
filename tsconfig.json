@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
+    "noImplicitAny": false,
+    "module": "ES2020",
+    "jsx": "react-native",
+    "lib": [
+      "es6",
+      "dom"
+    ],
+    "moduleResolution": "node",
+    "sourceMap": false,
+    "noEmit": true,
+    "strict": true,
+    "target": "esnext"
+  },
+  "exclude": [
+    "node_modules",
+    "babel.config.js",
+    "metro.config.js",
+    "jest.config.js",
+    "webpack.config.js"
+  ],
+  "extends": "expo/tsconfig.base"
+}
