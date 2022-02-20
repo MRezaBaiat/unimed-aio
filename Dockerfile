@@ -19,7 +19,7 @@ COPY ./app.json .
 COPY ./babel.config.js .
 COPY ./webpack.config.js .
 COPY ./tsconfig.json .
-COPY ./.eslintrc.json .
+COPY ./.eslintrc .
 
 RUN npm run build:web:production
 
