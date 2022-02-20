@@ -20,7 +20,7 @@ interface Props {
 }
 
 function PatientPostVisit(props: Props) {
-  const labels = ['ضعیف', 'متوسط', 'خوب', 'عالی'];
+  const labels = [dictionary['ضعیف'], dictionary['متوسط'], dictionary['خوب'], dictionary['عالی']];
   const customStyles = {
     stepIndicatorSize: hp(2.5),
     currentStepIndicatorSize: hp(2.5),

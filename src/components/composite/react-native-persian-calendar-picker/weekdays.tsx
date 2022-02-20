@@ -15,7 +15,7 @@ function Weekdays(props) {
   const { styles, startFromMonday, weekdays, textStyle } = props;
   let wd = weekdays;
   if (!wd) {
-    wd = startFromMonday ? Utils.WEEKDAYS_MON : Utils.WEEKDAYS; // English Week days Array
+    wd = startFromMonday ? Utils.WEEKDAYS_MON : Utils.getWeekDays(); // English Week days Array
   }
 
   return (

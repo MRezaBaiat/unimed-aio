@@ -21,7 +21,7 @@ import useStatus from '../../hooks/useStatus';
 
 const getLastPatientInQueueTime = (initiateDate: string) => {
   const SecondsToNow = (smartDate().getTime() - smartDate(initiateDate).getTime()) / 1000;
-  return SecondsToNow < 60 ? `${Math.round(SecondsToNow)} ثانیه ` : `${Math.round(SecondsToNow / 60)} دقیقه `;
+  return SecondsToNow < 60 ? `${Math.round(SecondsToNow)} ${dictionary['ثانیه']} ` : `${Math.round(SecondsToNow / 60)} ${dictionary['دقیقه']} `;
 };
 
 function QueueListScreen(props) {

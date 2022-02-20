@@ -87,7 +87,7 @@ const DoctorView = () => {
   const getLastPatientInQueueTime = () => {
     const initiateDate = queueList[queueList.length - 1].createdAt;
     const SecondsToNow = (smartDate().getTime() - smartDate(initiateDate).getTime()) / 1000;
-    return SecondsToNow < 60 ? `${Math.round(SecondsToNow)} ثانیه ` : `${Math.round(SecondsToNow / 60)} دقیقه `;
+    return SecondsToNow < 60 ? `${Math.round(SecondsToNow)} ${dictionary['ثانیه']} ` : `${Math.round(SecondsToNow / 60)} ${dictionary['دقیقه']} `;
   };
 
   return (
@@ -188,7 +188,7 @@ const DoctorView = () => {
                       fontSize: wp(3.3),
                       color: '#38488a',
                     }}
-                    text={`${queueList.length} بیمار`}
+                    text={`${queueList.length} ${dictionary['بیمار']}`}
                   />
                   <AppTextView
                     style={{
@@ -196,7 +196,7 @@ const DoctorView = () => {
                       fontSize: wp(3.3),
                       color: '#38488a',
                     }}
-                    text={' در انتظار پاسخگویی شما هستند'}
+                    text={dictionary[' در انتظار پاسخگویی شما هستند']}
                   />
                 </AppView>
               )}

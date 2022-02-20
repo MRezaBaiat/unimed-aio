@@ -210,7 +210,7 @@ const renderNormal = ({ wt, updateWT, index, day, expanded, onDaySelected, onDel
           }}
           textAlign="right"
           textColor="#38488A"
-          text={Helper.dayNumberToString(day)}
+          text={Helper.dayNumberToString(day,'az')}
         />
 
         {expanded ? (
@@ -341,7 +341,7 @@ const renderDisabled = ({ day, onDaySelected, updateWT }) => {
         }}
         textAlign="right"
         textColor="#4f4f4f"
-        text={Helper.dayNumberToString(day)}
+        text={Helper.dayNumberToString(day, 'az')}
       />
 
       <AppTextView

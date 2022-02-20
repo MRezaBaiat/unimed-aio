@@ -5,6 +5,7 @@ import { safeAssignStyles } from '../../../helpers';
 import { useFonts } from 'expo-font';
 import Kit from 'javascript-dev-kit';
 import { DictRecord } from '../../../assets/strings/dictionary';
+import useLang from '../../../hooks/useLang';
 
 export interface Props extends TextProps {
   text: string | DictRecord;
@@ -16,7 +17,7 @@ export interface Props extends TextProps {
 }
 function AppTextView(props: Props) {
   const { text, textColor, backgroundColor, fontSize, style, textAlign } = props;
-
+  const lang = useLang();
   /* const [loaded] = useFonts(Kit.toObject(Object.values(R.fonts), (value, createdObject) => {
     return {
       key: value,
@@ -38,7 +39,9 @@ function AppTextView(props: Props) {
         style
       )}
     >
-      {text ? text + ' ' : ''}
+      {text && typeof text === 'string' && text + ' '}
+      {text && typeof text !== 'string' && text[lang]}
+      {!text && ''}
     </Text>
   );
 }

@@ -84,7 +84,7 @@ function DoctorListScreen(props) {
               placeholderTextColor={'#4F4F4F'}
               textStyle={{ fontSize: wp(3), color: '#878787', fontFamily: R.fonts.fontFamily_faNum, textAlign: 'right' }}
               style={{ width: '85%', height: hp(6.5), justifyContent: 'center', paddingHorizontal: hp(2) }}
-              placeHolder="جستجو بر اساس کد اختصاصی یا نام پزشک"
+              placeHolder={dictionary['جستجو بر اساس کد اختصاصی یا نام پزشک']}
             />
             <AppView style={{ height: '50%', width: 1, backgroundColor: '#C4C4C4', marginHorizontal: hp(1.8) }} />
             <AppImageView resizeMode="contain" style={{ width: wp(5), height: wp(5) }} src={R.images.icons.search} />

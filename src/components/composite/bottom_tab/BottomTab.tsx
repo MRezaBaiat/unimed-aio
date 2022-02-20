@@ -7,11 +7,12 @@ import AppTouchable from '../../base/app-touchable/AppTouchable';
 import AppTextView from '../../base/app-text-view/AppTextView';
 import AppImageView from '../../base/app-image/app-imageview';
 import AppNavigator from '../../../navigation/AppNavigator';
+import dictionary, { DictRecord } from '../../../assets/strings/dictionary';
 
 interface Props {
-  text1?: string;
-  text2?: string;
-  text3?: string;
+  text1: string | DictRecord;
+  text2: string | DictRecord;
+  text3: string | DictRecord;
   Icon2?: any;
   focusedInput?: string;
   Navigate2?: string;
@@ -76,9 +77,9 @@ const BottomTab: React.FC<Props> = (props) => {
 };
 
 BottomTab.defaultProps = {
-  text1: 'خانه',
-  text2: 'سوابق مشاوره',
-  text3: 'سایر',
+  text1: dictionary['خانه'],
+  text2: dictionary['سوابق مشاوره'],
+  text3: dictionary['سایر'],
   Icon2: { Active: R.images.icons.VisitHistoryIconfocused, InActive: R.images.icons.VisitHistoryIcon },
   focusedInput: '0',
   Navigate2: 'VisitsHistoryScreen',

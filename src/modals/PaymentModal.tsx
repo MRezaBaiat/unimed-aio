@@ -163,7 +163,7 @@ function PaymentModal(props: Props) {
           maxLength={6}
           value={discountCode}
           placeholderTextColor="#BDBDBD"
-          placeHolder="ورود کد تخفیف"
+          placeHolder={dictionary['ورود کد تخفیف']}
           onChange={(text) => {
             setDiscountCode(text);
           }}

@@ -32,20 +32,6 @@ const ImageSlides = [
   },
 ];
 
-const FeaturesData = [
-  {
-    title: 'ارتباط آنلاین با پزشک',
-    imageUrl: R.images.features.feature1,
-    Navigate: 'DoctorListScreen',
-    type: 'OnLine',
-  },
-  {
-    title: 'کلینیک‌ و بیمارستان‌',
-    imageUrl: R.images.features.feature3,
-    Navigate: 'HealthCentersScreen',
-  }
-];
-
 const StandardModeScreen = ({ initialCode }: { initialCode?: string }) => {
   const [searchFocused, setSearchFocued] = useState(false);
   const [doctors, setDoctors] = useState(getFavoriteDoctors() as User[]);
@@ -218,7 +204,7 @@ const StandardModeScreen = ({ initialCode }: { initialCode?: string }) => {
                   setSearchFocued(true);
                 }
               }}
-              placeHolder="جستجو بر اساس کد اختصاصی یا نام پزشک"
+              placeHolder={dictionary['جستجو بر اساس کد اختصاصی یا نام پزشک']}
               placeholderTextColor={searchFocused ? '#878787' : '#4F4F4F'}
               value={search}
               onChange={(search) => setSearch(search)}
@@ -315,7 +301,19 @@ const StandardModeScreen = ({ initialCode }: { initialCode?: string }) => {
             marginTop: hp(1.5),
             backgroundColor: '#e5f3f3',
           }}
-          data={FeaturesData}
+          data={[
+            {
+              title: dictionary['ارتباط آنلاین با پزشک'],
+              imageUrl: R.images.features.feature1,
+              Navigate: 'DoctorListScreen',
+              type: 'OnLine',
+            },
+            {
+              title: dictionary['کلینیک‌ و بیمارستان‌'],
+              imageUrl: R.images.features.feature3,
+              Navigate: 'HealthCentersScreen',
+            },
+          ]}
           keyExtractor={(item, index) => {
             return index.toString();
           }}

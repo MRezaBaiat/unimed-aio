@@ -716,148 +716,238 @@ const dictionary = {
     fa: 'son xəstənin gözləmə müddəti',
   },
   by_registering: {
-    fa: 'با ثبت نام در اپ مطپ ',
+    fa: 'UniMed proqramında qeydiyyatdan keçməklə ',
   },
   signin_conditions: {
-    fa: 'قوانین و شرایط عضویت ',
+    fa: 'mən üzvlük şərtlərini ',
   },
   that_accept: {
-    fa: 'را می پذیرم',
+    fa: 'qəbul edirəm',
   },
   'بیماری در لیست انتظار وجود ندارد': {
-    fa: 'بیماری در لیست انتظار وجود ندارد',
+    fa: 'Gözləmə siyahısında heç bir xəstəlik yoxdur',
   },
   'مدت انتظار آخرین بیمار': {
-    fa: 'مدت انتظار آخرین بیمار',
+    fa: 'Son xəstənin gözləmə müddəti',
   },
   'نسخه الکترونیکی': {
-    fa: 'نسخه الکترونیکی',
+    fa: 'Elektron dərman resepti',
   },
   پزشکان: {
-    fa: 'پزشکان',
+    fa: 'həkimlər',
   },
   'سوابق مشاوره': {
-    fa: 'سوابق مشاوره',
+    fa: 'Məsləhət tarixi',
   },
   'پایان مشاوره': {
-    fa: 'پایان مشاوره',
+    fa: 'Məsləhətləşmənin sonu',
   },
   شنبه: {
-    fa: 'شنبه',
+    fa: 'şənbə',
   },
   یکشنبه: {
-    fa: 'یکشنبه',
+    fa: 'bazar günü',
   },
   دوشنبه: {
-    fa: 'دوشنبه',
+    fa: 'bazar ertəsi',
   },
   'سه شنبه': {
-    fa: 'سه شنبه',
+    fa: 'çərşənbə axşamı',
   },
   چهارشنبه: {
-    fa: 'چهارشنبه',
+    fa: 'çərşənbə',
   },
   'پنج شنبه': {
-    fa: 'پنج شنبه',
+    fa: 'cümə axşamı',
   },
   جمعه: {
-    fa: 'جمعه',
+    fa: 'cümə',
   },
-  فروردین: {
-    fa: 'فروردین',
+  january: {
+    fa: 'yanvar',
   },
-  اردیبهشت: {
-    fa: 'اردیبهشت',
+  february: {
+    fa: 'fevral',
   },
-  خرداد: {
-    fa: 'خرداد',
+  march: {
+    fa: 'mart',
   },
-  تیر: {
-    fa: 'تیر',
+  april: {
+    fa: 'aprel',
   },
-  مرداد: {
-    fa: 'مرداد',
+  may: {
+    fa: 'may',
   },
-  شهریور: {
-    fa: 'شهریور',
+  june: {
+    fa: 'iyun',
   },
-  مهر: {
-    fa: 'مهر',
+  july: {
+    fa: 'iyul',
   },
-  آبان: {
-    fa: 'آبان',
+  august: {
+    fa: 'avqust',
   },
-  آذر: {
-    fa: 'آذر',
+  september: {
+    fa: 'sentyabr',
   },
-  دی: {
-    fa: 'دی',
+  october: {
+    fa: 'oktyabr',
   },
-  بهمن: {
-    fa: 'بهمن',
+  november: {
+    fa: 'noyabr',
   },
-  اسفند: {
-    fa: 'اسفند',
+  december: {
+    fa: 'november',
   },
   'انتخاب زمان مشاوره آنلاین': {
-    fa: 'انتخاب زمان مشاوره آنلاین',
+    fa: 'Onlayn məsləhətləşmə üçün vaxt seçin',
   },
   ثبت: {
-    fa: 'ثبت',
+    fa: 'Qeyd',
   },
   'کلینیک‌ها و بیمارستان‌ها': {
-    fa: 'کلینیک‌ها و بیمارستان‌ها',
+    fa: 'Xəstəxanalar və klinikalar',
   },
   تا: {
-    fa: 'تا',
+    fa: 'qədər',
   },
   'ساعات پاسخگوئی آنلاین': {
-    fa: 'ساعات پاسخگوئی آنلاین',
+    fa: 'Onlayn cavab vermə saatları',
   },
   گالری: {
-    fa: 'گالری',
+    fa: 'qalereya',
   },
   دوربین: {
-    fa: 'دوربین',
+    fa: 'Kamera',
   },
   'دریافت تماس از': {
-    fa: 'دریافت تماس از',
+    fa: 'Zəngləri qəbul edin',
   },
   'حذف ساعت روز انتخاب شده': {
-    fa: 'حذف ساعت روز انتخاب شده',
+    fa: 'Seçilmiş günü və vaxtı silin',
   },
   'برای بستن اپلیکشیشن دوباره دکمه برگشت را لمس کنید': {
-    fa: 'برای بستن اپلیکشیشن دوباره دکمه برگشت را لمس کنید',
+    fa: 'Proqramı bağlamaq üçün yenidən geri düyməsinə toxunun',
   },
   'انتخاب فایل': {
-    fa: 'انتخاب فایل',
+    fa: 'Fayl seçimi',
   },
   'آیا برای پایان مکالمه و خروج از صفحه‌ی مشاوره اطمینان دارید؟': {
-    fa: 'آیا برای پایان مکالمه و خروج از صفحه‌ی مشاوره اطمینان دارید؟',
+    fa: 'Söhbəti bitirmək və məsləhət səhifəsindən çıxmaq istədiyinizə əminsiniz?',
   },
   'مشاوره آنلاین': {
-    fa: 'مشاوره آنلاین',
+    fa: 'Onlayn konsultasiya',
   },
   'مشاوره شما به پایان رسید': {
-    fa: 'مشاوره شما به پایان رسید',
+    fa: 'Onlayn məsləhətləşməniz bitdi',
   },
   'ورود کد فعالسازی': {
-    fa: 'ورود کد فعالسازی',
+    fa: 'Aktivləşdirmə kodunu daxil edin',
   },
   'کد 6 رقمی ارسال شده به شماره همراه خود را وارد کنید.': {
-    fa: 'کد 6 رقمی ارسال شده به شماره همراه خود را وارد کنید.',
+    fa: 'Nömrənizə göndərilən 6 rəqəmli kodu daxil edin.',
   },
   'تنظیمات پروفایل': {
-    fa: 'تنظیمات پروفایل',
+    fa: 'Profil parametrləri',
   },
   'مبلغ ویزیت:': {
-    fa: 'مبلغ ویزیت:',
+    fa: 'Həkim ziyarətinin dəyəri:',
   },
   'افزودن ساعت بیشتر در این روز': {
-    fa: 'افزودن ساعت بیشتر در این روز',
+    fa: 'Bu gündə daha çox saat əlavə edin',
   },
   'انتخاب نشده': {
-    fa: 'انتخاب نشده',
+    fa: 'Seçilməyib',
+  },
+  خانه: {
+    fa: 'Ev',
+  },
+  سایر: {
+    fa: 'Digər',
+  },
+  'جستجو بر اساس کد اختصاصی یا نام پزشک': {
+    fa: 'Xüsusi kod və ya həkim adı ilə axtarın',
+  },
+  ضعیف: {
+    fa: 'Zəif',
+  },
+  متوسط: {
+    fa: 'orta',
+  },
+  خوب: {
+    fa: 'Yaxşı',
+  },
+  عالی: {
+    fa: 'Əla',
+  },
+  'کلینیک‌ و بیمارستان‌': {
+    fa: 'Klinikalar və xəstəxanalar',
+  },
+  'ارتباط آنلاین با پزشک': {
+    fa: 'Həkimlə onlayn ünsiyyət',
+  },
+  'کد اختصاصی': {
+    fa: 'Xüsusi kod',
+  },
+  مشاوره: {
+    fa: 'Məsləhətçilik',
+  },
+  'لطفا در ساعات پاسخگویی مراجعه فرمایید': {
+    fa: 'Zəhmət olmasa cavab saatlarında müraciət edin',
+  },
+  'ورود کد تخفیف': {
+    fa: 'Endirim kodunu daxil edin',
+  },
+  ' در انتظار پاسخگویی شما هستند': {
+    fa: ' Cavabınızı gözləyirlər',
+  },
+  بیمار: {
+    fa: 'Xəstə',
+  },
+  'ارتباط تصویری مستقیم با پزشک': {
+    fa: 'Həkimlə birbaşa video əlaqə',
+  },
+  'با اپلیکیشن یونیمد می‌توانید از طریــق ارتباط تصویری، صوتی و متنی به صورت مستقیم با دکتر خود در ارتباط باشید.': {
+    fa: 'MAPP tətbiqi ilə siz video, audio və mətn rabitəsi vasitəsilə həkiminizlə birbaşa əlaqə saxlaya bilərsiniz.',
+  },
+  'دریافت نوبت حضوری': {
+    fa: 'Görüş təyin edin',
+  },
+  'می‌توانید از طریق نوبت حضوری در یونیمد از پزشکان منتخب در سراسر کشور نوبت بگیرید.': {
+    fa: 'Unimeddə qəbula yazılmaqla ölkənin hər yerindən seçilmiş həkimlərin qəbuluna yazıla bilərsiniz.',
+  },
+  'خدمات پزشکی و پرستاری در منزل': {
+    fa: 'Evdə tibbi və tibb bacısı xidmətləri',
+  },
+  'تمامی خدمات پزشکی و پرستاری اعم از ویزیت پزشک، تصویربرداری پزشکی، تزریقات و... را از طریق یونیمد در منزل انجام دهید.': {
+    fa: 'Unimed vasitəsilə evdə bütün tibbi və tibb bacısı xidmətlərini, o cümlədən həkim ziyarətləri, tibbi görüntüləmə, inyeksiya və s. həyata keçirin.',
+  },
+  'پیگیری‌های بعد از درمان بیماران': {
+    fa: 'Xəstələrin müalicəsindən sonra müşahidə',
+  },
+  'با اپلیکیشن یونیمد می‌توانید از طریــق ارتباط تصویری، صوتی و متنی به صورت مستقیم با بیمار خود در ارتباط باشید.': {
+    fa: 'Unimed tətbiqi ilə siz video, audio və mətn rabitəsi vasitəsilə xəstənizlə birbaşa əlaqə saxlaya bilərsiniz.',
+  },
+  'نوبت‌دهی حضوری به بیماران': {
+    fa: 'Xəstələrlə şəxsən görüşlər',
+  },
+  'بیماران می‌توانند از طریق دریافت نوبت حضوری در یونیمد از پزشکان منتخب در سراسر کشور نوبت بگیرند.': {
+    fa: 'Xəstələr Unimed-də qəbula yazılmaqla ölkə üzrə seçilmiş həkimlərin qəbuluna yazıla bilərlər.',
+  },
+  'خرید تجهیزات پزشکی': {
+    fa: 'Tibbi avadanlıq alın',
+  },
+  '‌پزشکان از طریق فروشگاه یونیمد می‌توانند نسبت به خرید تجهیزات پزشکی مورد نیاز خود اقدام نمایند.': {
+    fa: 'Həkimlər ehtiyac duyduqları tibbi avadanlıqları Unimed mağazası vasitəsilə ala bilərlər.',
+  },
+  دقیقه: {
+    fa: 'Dəqiqələr',
+  },
+  ثانیه: {
+    fa: 'Saniyələr',
+  },
+  'پیام خود را بنویسید': {
+    fa: 'Mesajınızı yazın',
   },
 };
 export type DictRecord = Record<string, string>;

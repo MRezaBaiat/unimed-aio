@@ -161,7 +161,7 @@ function ChatScreen(props) {
             value={text}
             multiline={true}
             autoGrow={true}
-            placeHolder="پیام خود را بنویسید"
+            placeHolder={dictionary['پیام خود را بنویسید']}
             placeholderTextColor="#BDBDBD"
             onChange={(t) => {
               ChatService.sendTypingStatus(TypingStatus.TYPING);

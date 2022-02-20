@@ -43,7 +43,7 @@ const QueueModeScreen = () => {
         <AppView style={{ height: hp(6), width: wp(80), marginTop: hp(2), alignSelf: 'center', flexDirection: 'row-reverse', alignItems: 'center', justifyContent: 'space-around' }}>
           <AppTextView textColor="#38488A" text={dictionary.estimated_queue_time} fontSize={wp(3.3)} />
           <AppView style={{ height: 0.4, backgroundColor: 'rgba(80,188,189,0.5)', flex: 1, marginHorizontal: 10, marginTop: hp(1) }} />
-          <AppTextView textColor="#38488A" style={{ fontFamily: R.fonts.fontFamily_faNum_Bold }} text={`${estimated} دقیقه `} />
+          <AppTextView textColor="#38488A" style={{ fontFamily: R.fonts.fontFamily_faNum_Bold }} text={`${estimated} ${dictionary['دقیقه']} `} />
         </AppView>
       )}
       {queue && (

@@ -46,7 +46,7 @@ function HealthCentersScreen() {
       >
         <AppView style={{ backgroundColor: '#F2F2F2', width: wp(92), height: hp(7), borderRadius: hp(1.2), alignSelf: 'center', alignItems: 'center' }}>
           <AppView style={{ width: '100%', height: hp(7), borderRadius: hp(1.2), flexDirection: 'row-reverse', alignItems: 'center' }}>
-            <AppTextInput onChange={(value) => {}} textStyle={{ fontSize: wp(3.3), color: '#878787', textAlign: 'right', fontFamily: R.fonts.fontFamily_faNum }} style={{ width: '85%', height: hp(7), alignItems: 'center', paddingHorizontal: hp(2) }} placeHolder="جستجوی نام کلینیک یا بیمارستان" />
+            <AppTextInput onChange={(value) => {}} textStyle={{ fontSize: wp(3.3), color: '#878787', textAlign: 'right', fontFamily: R.fonts.fontFamily_faNum }} style={{ width: '85%', height: hp(7), alignItems: 'center', paddingHorizontal: hp(2) }} placeHolder={dictionary['جستجوی نام کلینیک یا بیمارستان']} />
             <AppView style={{ height: hp(5), width: 1, backgroundColor: '#C4C4C4' }} />
             <AppImageView resizeMode="contain" style={{ width: wp(10), height: wp(10) }} src={R.images.icons.search} />
           </AppView>

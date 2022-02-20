@@ -22,8 +22,6 @@ import useLang from '../../hooks/useLang';
 import dictionary from '../../assets/strings/dictionary';
 
 function DoctorProfileScreen(props) {
-  const lang = useLang();
-
   const closeModal = () => {
     setModalVisible(false);
   };
@@ -152,7 +150,7 @@ function DoctorProfileScreen(props) {
               justifyContent: 'center',
             }}
           >
-            <AppTextView style={{ fontFamily: R.fonts.fontFamily_faNum }} textColor="#38488A" fontSize={wp(4.6)} text={`کد اختصاصی ${code}`} />
+            <AppTextView style={{ fontFamily: R.fonts.fontFamily_faNum }} textColor="#38488A" fontSize={wp(4.6)} text={`${dictionary['کد اختصاصی']} ${code}`} />
           </AppView>
         )}
 
@@ -239,7 +237,7 @@ function DoctorProfileScreen(props) {
                                 }}
                                 textAlign="right"
                                 textColor="#4f4f4f"
-                                text={Helper.dayNumberToString(sortDay, lang)}
+                                text={Helper.dayNumberToString(sortDay, 'az')}
                               />
                               <AppTextView
                                 style={{
@@ -302,7 +300,7 @@ function DoctorProfileScreen(props) {
                 }}
               >
                 <AppTextView
-                  text={isResponse ? 'مشاوره' : 'لطفا در ساعات پاسخگویی مراجعه فرمایید'}
+                  text={isResponse ? dictionary['مشاوره'] : dictionary['لطفا در ساعات پاسخگویی مراجعه فرمایید']}
                   fontSize={wp(3.8)}
                   style={{
                     color: '#FFFFFF',

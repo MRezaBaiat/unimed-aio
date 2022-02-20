@@ -14,7 +14,7 @@ import Controls from './controls';
 
 function HeaderControls(props) {
   const { styles, currentMonth, currentYear, onPressNext, onPressPrevious, months, previousTitle, nextTitle, textStyle, headingLevel } = props;
-  const MONTHS = months || Utils.MONTHS; // English Month Array
+  const MONTHS = months || Utils.getMonths(); // English Month Array
   // getMonth() call below will return the month number, we will use it as the
   // index for month array in english
   const previous = previousTitle || '>';
