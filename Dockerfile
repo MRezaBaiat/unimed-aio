@@ -22,7 +22,6 @@ COPY ./tsconfig.json .
 COPY ./.eslintrc.json .
 
 RUN npm run build:web:production
-RUN yarn upgrade api
 
 EXPOSE 80
 
