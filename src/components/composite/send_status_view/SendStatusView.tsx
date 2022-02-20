@@ -6,6 +6,7 @@ import { hp, wp } from '../../../helpers/responsive-screen';
 import AppTextView from '../../base/app-text-view/AppTextView';
 import AppImageView from '../../base/app-image/app-imageview';
 import { StyleProp, ViewProps, ViewStyle } from 'react-native';
+import { smartDate } from 'javascript-dev-kit';
 
 const types = ['CircleFlip', 'Bounce', 'Wave', 'WanderingCubes', 'Pulse', 'ChasingDots', 'ThreeBounce', 'Circle', '9CubeGrid', 'WordPress', 'FadingCircle', 'FadingCircleAlt', 'Arc', 'ArcAlt'];
 
@@ -16,7 +17,7 @@ interface Props {
 }
 function SendStatusView(props: Props) {
   const { sendStatus, date, style } = props;
-  const time = new Date(date);
+  const time = smartDate(date);
   return (
     <AppView style={style}>
       {sendStatus && (
@@ -29,7 +30,7 @@ function SendStatusView(props: Props) {
           {sendStatus === SendStatus.READEN && renderSent()}
         </AppView>
       )}
-      <AppTextView style={{ fontFamily: R.fonts.fontFamily_faNum, fontSize: wp(3.3), marginHorizontal: hp(1) }} text={`${time.getHours()} : ${time.getMinutes().toString().length === 1 ? '0' + time.getMinutes() : time.getMinutes()}`} textColor={'#9e9e9e'} />
+      <AppTextView style={{ fontFamily: R.fonts.fontFamily_faNum, fontSize: wp(3.3), marginHorizontal: hp(1) }} text={`${time.hour()} : ${time.minutes().toString().length === 1 ? '0' + time.minutes() : time.minutes()}`} textColor={'#9e9e9e'} />
     </AppView>
   );
 }

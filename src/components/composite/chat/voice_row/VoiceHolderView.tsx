@@ -61,7 +61,7 @@ const PlayButton = ({ file, duration, isSentByUser, chat }) => {
       <AppView style={{ position: 'relative', width: '70%', flexDirection: 'row', alignItems: 'center' }}>
         <Slider onSlidingComplete={onValueChange} value={playerState.progress.current || 0} minimumValue={0} maximumValue={playerState.progress.total || duration || 100} minimumTrackTintColor={isSentByUser ? '#38488A' : '#50BCBD'} thumbTintColor={isSentByUser ? '#38488A' : '#50BCBD'} style={{ zIndex: 5, width: '100%', paddingTop: 10, paddingBottom: 10 }} />
       </AppView>
-      <SendStatusView sendStatus={chat.sender === getMyUserId() && chat.sendStatus} date={chat.date} style={{ flexDirection: 'row-reverse', width: '100%', alignItems: 'center', paddingHorizontal: wp(1), position: 'absolute', bottom: '1%' }} />
+      <SendStatusView sendStatus={chat.sender === getMyUserId() && chat.sendStatus} date={chat.createdAt} style={{ flexDirection: 'row-reverse', width: '100%', alignItems: 'center', paddingHorizontal: wp(1), position: 'absolute', bottom: '1%' }} />
     </AppView>
   );
 };

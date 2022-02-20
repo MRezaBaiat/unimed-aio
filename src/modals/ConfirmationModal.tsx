@@ -1,7 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Modal, Keyboard, Linking } from 'react-native';
-import { useSelector } from 'react-redux';
-import { User } from 'api';
 import AppView from '../components/base/app-view/AppView';
 import { hp, wp } from '../helpers/responsive-screen';
 import AppTextView from '../components/base/app-text-view/AppTextView';
@@ -9,15 +6,15 @@ import ModalHeader from '../components/composite/header/ModalHeader';
 import AppTouchable from '../components/base/app-touchable/AppTouchable';
 import R from '../assets/R';
 import AppModal from '../components/base/app-modal/AppModal';
-import dictionary from '../assets/strings/dictionary';
+import dictionary, { DictRecord } from '../assets/strings/dictionary';
 
 interface Props {
   onRequestClose?: () => void;
   modalVisible: boolean;
   closeModal: () => void;
   onConfirmClick: () => void;
-  text: string;
-  title: string;
+  text: string | DictRecord;
+  title: string | DictRecord;
 }
 function ConfirmationModal(props: Props) {
   const { onRequestClose, modalVisible, onConfirmClick, text, closeModal, title } = props;

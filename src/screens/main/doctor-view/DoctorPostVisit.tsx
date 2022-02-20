@@ -41,7 +41,7 @@ const DoctorPostVisit = (props: Props) => {
             fontSize: R.fontsSize.large,
             color: '#FFFFFF',
           }}
-          text="مشاوره شما به پایان رسید"
+          text={dictionary['مشاوره شما به پایان رسید']}
         />
       </AppView>
       <DoctorPostVisitModal

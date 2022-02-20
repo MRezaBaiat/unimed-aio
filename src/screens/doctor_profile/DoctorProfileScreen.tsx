@@ -19,6 +19,7 @@ import PaymentModal from '../../modals/PaymentModal';
 import Kit from 'javascript-dev-kit';
 import useUser from '../../hooks/useUser';
 import useLang from '../../hooks/useLang';
+import dictionary from '../../assets/strings/dictionary';
 
 function DoctorProfileScreen(props) {
   const lang = useLang();
@@ -163,7 +164,7 @@ function DoctorProfileScreen(props) {
             }}
             style={{ flex: 1, height: '100%', borderRadius: hp(1.2), backgroundColor: visitType === 'OnLine' ? '#50BCBD' : '#FFFFFF', justifyContent: 'center', alignItems: 'center' }}
           >
-            <AppTextView fontSize={wp(3.8)} textColor={visitType === 'OnLine' ? '#FFFFFF' : '#50BCBD'} text="مشاوره آنلاین" />
+            <AppTextView fontSize={wp(3.8)} textColor={visitType === 'OnLine' ? '#FFFFFF' : '#50BCBD'} text={dictionary['مشاوره آنلاین']} />
           </AppTouchable>
           {/* <AppTouchable onClick={() => { isPatient ? setvisitType('Attendance') : setShowDoctorAlert(true); }} style={{ flex: 1, height: '100%', borderRadius: hp(1.2), backgroundColor: visitType === 'Attendance' ? '#50BCBD' : '#FFFFFF', justifyContent: 'center', alignItems: 'center' }}>
             <AppTextView fontSize={wp(3.8)} textColor={visitType === 'Attendance' ? '#FFFFFF' : '#50BCBD'} text="نوبت حضوری" />
@@ -196,7 +197,7 @@ function DoctorProfileScreen(props) {
                   justifyContent: 'space-between',
                 }}
               >
-                <AppTextView textColor="#38488A" fontSize={wp(3.8)} text="ساعات پاسخگوئی آنلاین" />
+                <AppTextView textColor="#38488A" fontSize={wp(3.8)} text={dictionary['ساعات پاسخگوئی آنلاین']} />
                 <AppImageView resizeMode="contain" style={{ width: wp(4), height: wp(4) }} src={R.images.icons.arrow_down} />
               </AppTouchable>
               {isOpen && (
@@ -272,7 +273,7 @@ function DoctorProfileScreen(props) {
                   paddingHorizontal: '4%',
                 }}
               >
-                <AppTextView style={{ fontSize: wp(3.8) }} textAlign="right" textColor="#38488A" text="مبلغ ویزیت:" />
+                <AppTextView style={{ fontSize: wp(3.8) }} textAlign="right" textColor="#38488A" text={dictionary['مبلغ ویزیت:']} />
                 <AppTextView
                   style={{
                     fontSize: wp(3.8),
@@ -280,7 +281,7 @@ function DoctorProfileScreen(props) {
                   }}
                   textAlign="right"
                   textColor="#38488A"
-                  text={`${numberWithCommas(cost)} تومان `}
+                  text={`${numberWithCommas(cost)} ${dictionary.toman} `}
                 />
               </AppView>
             )}

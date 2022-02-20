@@ -3,10 +3,8 @@ import AuthService from '../../services/AuthService';
 import ErrorHandler from '../../helpers/ErrorHandler';
 import { Text, StyleSheet } from 'react-native';
 import R from '../../assets/R';
-import { useSelector } from 'react-redux';
 import dictionary from '../../assets/strings/dictionary';
 import CountryPicker, { CountryCode } from 'react-native-country-picker-modal';
-// import CountryPicker from 'react-native-country-picker-modal';
 import AppContainer from '../../components/base/app-container/AppContainer';
 import AppImageView from '../../components/base/app-image/app-imageview';
 import AppView from '../../components/base/app-view/AppView';
@@ -26,18 +24,16 @@ function SigninScreen(props) {
   const [tcModalVisible, setTCModalVisible] = useState(false);
 
   const login = () => {
-    if (mobile.length > 11) {
-      // @ts-ignore
-      return ToastMaster.makeText(dictionary.phone_not_valid);
-    }
-    if (mobile.length < 10) {
+    if (mobile.length > 11 || mobile.length < 10) {
       return ToastMaster.makeText(dictionary.phone_not_valid);
     }
     AuthService.signIn(preMobile === '98' ? (mobile.length === 10 ? `0${mobile}` : `${mobile}`) : `00${preMobile}${mobile.length === 10 ? mobile : mobile.slice(1, 10)}`)
       .then((res) => {
+        console.log('res');
         setModalVisible(true);
       })
       .catch((err) => {
+        console.log('err');
         ErrorHandler.handleError(err);
       });
   };
@@ -158,16 +154,16 @@ function SigninScreen(props) {
             margin: hp(2),
           }}
         >
-          {'با ثبت نام در اپ مطپ '}
+          {dictionary.by_registering}
           <Text
             style={{ fontFamily: R.fonts.fontFamily_Bold, color: '#50BCBD' }}
             onPress={() => {
               setTCModalVisible(true);
             }}
           >
-            {'قوانین و شرایط عضویت '}
+            {dictionary.signin_conditions}
           </Text>
-          <Text>را می پذیرم</Text>
+          <Text>{dictionary.that_accept}</Text>
         </Text>
       </AppView>
 

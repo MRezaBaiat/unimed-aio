@@ -30,6 +30,7 @@ import useStatus from '../../hooks/useStatus';
 import useUser from '../../hooks/useUser';
 import useActiveCall from '../../hooks/useActiveCall';
 import useActiveVisit from '../../hooks/useActiveVisit';
+import dictionary from '../../assets/strings/dictionary';
 
 function ChatScreen(props) {
   const chats = useSelector<StoreType, Chat[]>((state) => state.chatsReducer.chats);
@@ -250,8 +251,8 @@ function ChatScreen(props) {
           closeModal={() => {
             _confirmationModalClose();
           }}
-          text="آیا برای پایان مکالمه و خروج از صفحه‌ی مشاوره اطمینان دارید؟"
-          title="پایان مشاوره"
+          text={dictionary['آیا برای پایان مکالمه و خروج از صفحه‌ی مشاوره اطمینان دارید؟']}
+          title={dictionary['پایان مشاوره']}
         />
       )}
       {historyModalVisible && <VisitsHistoryModal modalVisible={historyModalVisible} closeModal={closeModal} targetId={isPatient ? visit.doctor._id : visit.patient._id} type={isPatient ? 'patient' : 'doctor'} onRequestClose={() => {}} />}

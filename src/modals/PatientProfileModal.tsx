@@ -91,7 +91,7 @@ function PatientProfileModal(props: Props) {
     <AppModal animationType="slide" transparent={true} visible={modalVisible}>
       <AppView style={[{ height: hp(modalHeight), backgroundColor: '#FFFFFF', width: '100%', marginTop: hp(100 - modalHeight), borderTopLeftRadius: hp(3), borderTopRightRadius: hp(3), alignItems: 'center' }]}>
         <ModalHeader
-          text="تنظیمات پروفایل"
+          text={dictionary['تنظیمات پروفایل']}
           onClosePress={() => {
             closeModal();
           }}

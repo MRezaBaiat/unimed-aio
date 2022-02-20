@@ -19,13 +19,12 @@ console.error = function (...args) {
   originalError(...args);
 }; */
 
-export const devHost = 'https://www.azandaz.az';
-export const prdHost = 'https://www.azandaz.az';
+export const prdHost = 'https://www.Azdanaz.az';
 
 // export const baseUrl = prdHost;
 // export const chatServiceUrl = baseUrl;
 
-axios.defaults.baseURL = prdHost;// baseUrl + ':8080/'
+axios.defaults.baseURL = prdHost; // baseUrl + ':8080/'
 axios.defaults.withCredentials = true;
 
 Gateway.setAxiosInstance(axios);
@@ -35,10 +34,12 @@ JSGateway.setAxiosInstance(axios);
 // the environment is set up appropriately
 // registerRootComponent(App);
 if (Platform.OS === 'web') {
-    ReactDOM.render(
-        <React.StrictMode>
-            <App/>
-        </React.StrictMode>, document.getElementById('root'));
+  ReactDOM.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>,
+    document.getElementById('root')
+  );
 } else {
-    AppRegistry.registerComponent('main', () => App);
+  AppRegistry.registerComponent('main', () => App);
 }

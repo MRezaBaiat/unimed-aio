@@ -1,6 +1,6 @@
 import { Helper, ChatType, SendStatus, TypingStatus, Chat } from 'api';
 import ChatService from '../../services/ChatService';
-import Kit from 'javascript-dev-kit';
+import Kit, { smartDate } from 'javascript-dev-kit';
 import FileAsset from '../../helpers/file-manager/FileAsset';
 
 export const ACTION_NEW_MESSAGE = 'ACTION_NEW_MESSAGE';

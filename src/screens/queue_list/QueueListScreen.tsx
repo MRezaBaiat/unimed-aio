@@ -16,14 +16,16 @@ import AppImageView from '../../components/base/app-image/app-imageview';
 import AppTextView from '../../components/base/app-text-view/AppTextView';
 import AppPermissions from '../../helpers/AppPermissions';
 import dictionary from '../../assets/strings/dictionary';
+import { smartDate } from 'javascript-dev-kit';
+import useStatus from '../../hooks/useStatus';
 
-const getLastPatientInQueueTime = (initiateDate) => {
-  const SecondsToNow = (Date.now() - initiateDate) / 1000;
+const getLastPatientInQueueTime = (initiateDate: string) => {
+  const SecondsToNow = (smartDate().getTime() - smartDate(initiateDate).getTime()) / 1000;
   return SecondsToNow < 60 ? `${Math.round(SecondsToNow)} ثانیه ` : `${Math.round(SecondsToNow / 60)} دقیقه `;
 };
 
 function QueueListScreen(props) {
-  const status: DoctorStatus = useSelector((state) => state.userReducer.status);
+  const status = useStatus() as DoctorStatus;
   const queueList = status.queueList;
   console.log(status.visit);
 
@@ -61,7 +63,7 @@ function QueueListScreen(props) {
               <AppImageView src={item.patient.imageUrl} resizeMode="cover" style={{ height: hp(9.3), width: hp(9.3), borderRadius: 100 }} />
               <AppView style={{ height: '60%', width: '70%', marginRight: '4%', justifyContent: 'space-between' }}>
                 <AppTextView style={{ fontFamily: R.fonts.fontFamily_faNum_Bold, fontSize: wp(3.8), color: '#38488a' }} text={item.patient.name && item.patient.name !== 'Unknown' ? item.patient.name : item.patient.mobile.slice(0, 4) + '***' + item.patient.mobile.slice(7, 14)} />
-                <AppTextView style={{ fontFamily: R.fonts.fontFamily_faNum, fontSize: wp(3.3), color: '#9E9E9E' }} text={`${dictionary.last_patient_waiting_time}: ${getLastPatientInQueueTime(item.initiate_date)}`} />
+                <AppTextView style={{ fontFamily: R.fonts.fontFamily_faNum, fontSize: wp(3.3), color: '#9E9E9E' }} text={`${dictionary.last_patient_waiting_time}: ${getLastPatientInQueueTime(item.createdAt)}`} />
               </AppView>
               <AppImageView style={{ height: hp(2), width: hp(1.5), position: 'absolute', right: '6%' }} src={R.images.icons.arrow_left} />
             </AppTouchable>

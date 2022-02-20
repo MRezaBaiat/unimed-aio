@@ -63,7 +63,7 @@ export default function AnswerView() {
                             loop={true}
                             animation={R.animations.caller_pulse}
                         /> */}
-            <AppTextView style={{ position: 'absolute', bottom: hp(10), alignSelf: 'center', fontFamily: R.fonts.fontFamily_faNum_Bold, fontSize: wp(3.8), textAlign: 'center' }} textColor="#FFFFFF" text="دریافت تماس از" />
+            <AppTextView style={{ position: 'absolute', bottom: hp(10), alignSelf: 'center', fontFamily: R.fonts.fontFamily_faNum_Bold, fontSize: wp(3.8), textAlign: 'center' }} textColor="#FFFFFF" text={dictionary['دریافت تماس از']} />
             <AppView style={{ position: 'absolute', bottom: 0, width: '100%', height: hp(8), backgroundColor: '#50bcbd', alignItems: 'center', justifyContent: 'center' }}>
               <AppTextView style={{ fontFamily: R.fonts.fontFamily_faNum_Bold, fontSize: wp(6), textAlign: 'center' }} textColor="#FFFFFF" text={name} />
             </AppView>

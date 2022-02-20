@@ -1284,7 +1284,7 @@
     xcode "^3.0.1"
     xml2js "^0.4.23"
 
-"@expo/config-plugins@4.0.18", "@expo/config-plugins@^4.0.2":
+"@expo/config-plugins@4.0.18", "@expo/config-plugins@^4.0.18", "@expo/config-plugins@^4.0.2":
   version "4.0.18"
   resolved "https://registry.yarnpkg.com/@expo/config-plugins/-/config-plugins-4.0.18.tgz#80cf6a3aed83e78f714ad097d80e5a7cca48591a"
   integrity sha512-tW4bnrnKhn+PPHF8wf1KAoubICAVUHW8CcagvyFqaRIzeh6yavMIOsQShxOVTbgx7LzSyymZ1nEs45yCGAiMfA==
@@ -2321,18 +2321,19 @@
   resolved "https://registry.yarnpkg.com/@react-native-community/slider/-/slider-4.1.12.tgz#279ff7bbe487af92ad95ec758a029a54569e2a62"
   integrity sha512-CiuLZ2orueBiWHYxfaJF57jQY6HY2Q3z5pdAE4MKH8EqIImr/jgDJrJ/UxOVZHK1Ng9P+XlGIKfVIcuWZ6guuA==
 
-"@react-native-firebase/app@^11.5.0":
-  version "11.5.0"
-  resolved "https://registry.yarnpkg.com/@react-native-firebase/app/-/app-11.5.0.tgz#cc7656d8bd580ddf63676774c5f4e73af3652c9c"
-  integrity sha512-Jz5CBhqkybxHjTFr5V0K+Jq2YivzPbu9exSze61/z1zSaIfBhR4G38wmHk44VWAl+PEX8GaYy9yfT69tLiCERA==
+"@react-native-firebase/app@^14.5.0":
+  version "14.5.0"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/app/-/app-14.5.0.tgz#677a3965d172d3bde12690bcc993176943f3a99d"
+  integrity sha512-pMTYZA4gQl/m4+9tYE9/3YpGVfuqePg2RF1Fj+/6EUyt6w8y8ADvJyTXzFmJwEkG5CdyWaqvtEyZmsifInUp3w==
   dependencies:
+    "@expo/config-plugins" "^4.0.18"
     opencollective-postinstall "^2.0.1"
     superstruct "^0.6.2"
 
-"@react-native-firebase/messaging@^11.5.0":
-  version "11.5.0"
-  resolved "https://registry.yarnpkg.com/@react-native-firebase/messaging/-/messaging-11.5.0.tgz#724a65683a23e40fd4a36553198f27227cfe78fd"
-  integrity sha512-bjsoJByiNtikNLCf5RMmUdIj3uH8Uf0eeyM9PdqfNRB1mtVaYrU8AmXnzbSd5SqJ/sxqwyZVuxzWNEJrcOnhZw==
+"@react-native-firebase/messaging@^14.5.0":
+  version "14.5.0"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/messaging/-/messaging-14.5.0.tgz#ae4d2c8ef6432f6bbd541015817343e8703504ea"
+  integrity sha512-kLA5lx0xoHwMo1fPQWE5IzIKOrmmSYRAfxKQqCETEmCEv/TSa/siiKAWvB8BzSvNUJeZkFFWwv77MxfArtZsyg==
 
 "@react-native/assets@1.0.0":
   version "1.0.0"
@@ -3252,14 +3253,14 @@ anymatch@^3.0.0, anymatch@^3.0.3, anymatch@~3.1.2:
     normalize-path "^3.0.0"
     picomatch "^2.0.4"
 
-"api@https://gitlab.com/shekarchian/matap-api.git":
+"api@https://github.com/MRezaBaiat/unimed-api":
   version "1.0.0"
-  resolved "https://gitlab.com/shekarchian/matap-api.git#8a3fe4c0f7c783cf0fc4084d133b9a4b098bcc14"
+  resolved "https://github.com/MRezaBaiat/unimed-api#6925787bfc16c858e45f9d38d8c1162fcde1a36b"
   dependencies:
     "@nestjs/mongoose" "^9.0.2"
     class-transformer "^0.5.1"
     class-validator "^0.13.2"
-    javascript-dev-kit "~0.28.3"
+    javascript-dev-kit "~0.28.5"
     mongoose "^6.1.6"
 
 appcenter-analytics@^4.1.0:
@@ -7831,7 +7832,7 @@ jalali-moment@*:
     inquirer "^8.0.0"
     moment "^2.26.0"
 
-javascript-dev-kit@~0.28.3:
+javascript-dev-kit@~0.28.5:
   version "0.28.5"
   resolved "https://registry.yarnpkg.com/javascript-dev-kit/-/javascript-dev-kit-0.28.5.tgz#bf6647e25b6f35819ff99ca41d59605d926fb19c"
   integrity sha512-y14JFi1FPvaMI0jZqqo0KiclfYqv7EAlCou2R1NrrK1kx3lTp6/weDCBDEGeYqYI87kLQtbhF/yrqjtt1079GA==

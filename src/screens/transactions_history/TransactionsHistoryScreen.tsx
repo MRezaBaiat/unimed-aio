@@ -16,13 +16,11 @@ import Kit from 'javascript-dev-kit';
 import AppCardRow from '../../components/composite/app_card_row/AppCardRow';
 import AppActivityIndicator from '../../components/base/app-activity-indicator/AppActivityIndicator';
 import useUser from '../../hooks/useUser';
-import useLang from '../../hooks/useLang';
 
 function TransactionsHistoryScreen() {
   const [query, setQuery] = useState(undefined as QueryResponse<Transaction> | undefined);
   const [index, setIndex] = useState(0);
   const [loaded, setLoaded] = useState(false);
-  console.log(query);
   const limit = 50;
   const load = () => {
     TransactionsApi.getTransactions(limit * index, limit)
@@ -66,7 +64,6 @@ interface RowProps {
 const Row = (props: RowProps) => {
   const { transaction } = props;
   const user = useUser();
-  const lang = useLang();
   return (
     <AppCardRow
       title={detailedTextFromType(transaction.type, transaction)}
@@ -75,7 +72,7 @@ const Row = (props: RowProps) => {
       date={transaction.createdAt}
       titleFontSize={R.fontsSize.small}
       subtitleFontSize={R.fontsSize.small}
-      dateExtra={textFromType(transaction.type, user, lang)}
+      dateExtra={textFromType(transaction.type, user)}
       avatarStyle={{
         marginRight: wp(3),
         width: wp(18),
@@ -87,21 +84,6 @@ const Row = (props: RowProps) => {
       }}
       resizeMode="contain"
     />
-    /* <AppView style={R.styles.bigCard.cardView}>
-      <AppView style={{ height: hp(12.5), flexDirection: 'row-reverse', alignItems: 'center', paddingStart: '4%' }}>
-        <AppImageView src={modeFromType(transaction.type) === 'deposite' ? R.images.icons.transactionWith : R.images.icons.transactionDeposit} resizeMode='contain' style={{ width: hp(9.3), height: hp(9.3) }} />
-        <AppView style={{ height: '50%', width: '55%', marginRight: '7%', justifyContent: 'center' }}>
-          <AppTextView style={{ fontFamily: R.fonts.fontFamily_faNum, fontSize: R.fontsSize.small, color: '#4F4F4F', lineHeight: hp(3.5) }} text={detailedTextFromType(transaction.type, transaction)} />
-          <AppTextView style={{ fontFamily: R.fonts.fontFamily_faNum, fontSize: R.fontsSize.small, color: '#4F4F4F' }}
-            text={`${lang === 'fa' ? numberWithCommas(transaction.amount) : Kit.numbersToEnglish(numberWithCommas(transaction.amount))} ${dictionary.toman}`} />
-        </AppView>
-      </AppView>
-      <AppView style={R.styles.bigCard.cardBottom}>
-        <AppTextView text={textFromType(transaction.type, lang)} fontSize={R.fontsSize.small} textColor={'#38488A'} />
-        <AppTextView style={{ fontFamily: R.fonts.fontFamily_faNum }} text={lang === 'fa' ? `تاریخ: ${date}` : dateToString(transaction.date)} fontSize={R.fontsSize.small} textColor={'#4F4F4F'} />
-        <AppTextView style={{ fontFamily: R.fonts.fontFamily_faNum }} text={lang === 'fa' ? `ساعت: ${time}` : dateToString(transaction.date)} fontSize={R.fontsSize.small} textColor={'#4F4F4F'} />
-      </AppView>
-    </AppView> */
   );
 };
 
@@ -144,7 +126,7 @@ const modeFromType = (type: TransactionsApi, user: User) => {
   }
 };
 
-const textFromType = (type: TransactionType, user: User, lang: string) => {
+const textFromType = (type: TransactionType, user: User) => {
   const mode = modeFromType(type, user);
   if (mode === 'deposit') {
     return dictionary.deposite;

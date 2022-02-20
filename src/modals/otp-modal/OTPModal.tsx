@@ -61,7 +61,7 @@ function OTPModal(props: Props) {
           }}
           textColor="#38488A"
           fontSize={wp(4.6)}
-          text="ورود کد فعالسازی"
+          text={dictionary['ورود کد فعالسازی']}
         />
         <AppTextView
           style={{
@@ -72,7 +72,7 @@ function OTPModal(props: Props) {
           }}
           textColor="#666666"
           fontSize={wp(3.3)}
-          text="کد 6 رقمی ارسال شده به شماره همراه خود را وارد کنید."
+          text={dictionary['کد 6 رقمی ارسال شده به شماره همراه خود را وارد کنید.']}
         />
         {seconds === 0 && (
           <AppTouchable

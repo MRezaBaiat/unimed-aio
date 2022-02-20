@@ -2,7 +2,7 @@ import React, { memo, useEffect, useState, useRef } from 'react';
 import { ScrollView } from 'react-native-gesture-handler';
 import R from '../../../assets/R';
 import { useSelector } from 'react-redux';
-import { DoctorStatus } from 'Api';
+import { DoctorStatus } from 'api';
 import { ActivityIndicator, BackHandler, Linking } from 'react-native';
 import GlobalAlert from '../../../modals/global_alert/GlobalAlert';
 import AppNavigator from '../../../navigation/AppNavigator';
@@ -20,6 +20,8 @@ import { callIntent, openURL } from '../../../helpers';
 import AppLottieView from '../../../components/base/app-lottieview/AppLottieView';
 import AppActivityIndicator from '../../../components/base/app-activity-indicator/AppActivityIndicator';
 import useStatus from '../../../hooks/useStatus';
+import { smartDate } from 'javascript-dev-kit';
+import dictionary from '../../../assets/strings/dictionary';
 
 const ImageSlides = [
   {
@@ -34,11 +36,11 @@ const ImageSlides = [
 ];
 const FeaturesData = [
   {
-    title: 'پزشکان',
+    title: dictionary['پزشکان'],
     imageUrl: R.images.features.feature1,
     Navigate: 'DoctorListScreen',
   },
-  { title: 'نسخه الکترونیکی', imageUrl: R.images.features.feature8 },
+  { title: dictionary['نسخه الکترونیکی'], imageUrl: R.images.features.feature8 },
 ];
 const _linkToURL = async (url) => {
   const canOpen = await Linking.canOpenURL(url);
@@ -46,7 +48,7 @@ const _linkToURL = async (url) => {
   if (canOpen) {
     openURL(url);
   } else {
-    alert('متاسفانه امکان مشاهده سایت در حال حاضور وجود ندارد');
+    alert('Not Available');
   }
 };
 const DoctorView = () => {
@@ -90,7 +92,7 @@ const DoctorView = () => {
 
   return (
     <AppContainer style={{ flex: 1 }}>
-      {exitAlert && <GlobalAlert BgColor="green" text="برای بستن اپلیکشیشن دوباره دکمه برگشت را لمس کنید" />}
+      {exitAlert && <GlobalAlert BgColor="green" text={dictionary['برای بستن اپلیکشیشن دوباره دکمه برگشت را لمس کنید']} />}
       {queueList ? (
         <ScrollView
           contentContainerStyle={{
@@ -205,7 +207,7 @@ const DoctorView = () => {
                   color: '#9E9E9E',
                   marginTop: hp(1),
                 }}
-                text={queueList.length === 0 ? 'بیماری در لیست انتظار وجود ندارد' : `مدت انتظار آخرین بیمار: ${getLastPatientInQueueTime()}`}
+                text={queueList.length === 0 ? dictionary['بیماری در لیست انتظار وجود ندارد'] : `${dictionary['مدت انتظار آخرین بیمار']}: ${getLastPatientInQueueTime()}`}
               />
             </AppView>
           </AppTouchable>

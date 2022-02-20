@@ -193,7 +193,7 @@ export default function ChatHeaderScreen({ hp, wp, imageUrl, isPatient, videoCal
         }}
       >
         <AppButton
-          text="سوابق مشاوره"
+          text={dictionary['سوابق مشاوره']}
           textSize={hp(2)}
           textColor="#FFFFFF"
           style={{
@@ -213,7 +213,7 @@ export default function ChatHeaderScreen({ hp, wp, imageUrl, isPatient, videoCal
         {visit.maxDurationMillisec && visit.maxDurationMillisec !== 0 && <VisitTimerView visit={visit} />}
         {user.type === UserType.DOCTOR ? (
           <AppButton
-            text="پایان مشاوره"
+            text={dictionary['پایان مشاوره']}
             textSize={hp(2)}
             textColor="#FFFFFF"
             style={{

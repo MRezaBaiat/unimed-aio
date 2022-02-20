@@ -236,15 +236,6 @@ function SettingScreen() {
             style={{ width: wp(8.5), aspectRatio: 1 }}
             src={R.images.icons.languageSettingIcon}
           />
-          <AppTextView
-            style={{
-              fontFamily: R.fonts.fontFamily_faNum,
-              fontSize: wp(3.8),
-              color: '#38488A',
-              marginRight: '14.75%'
-            }}
-            text="زبان (Language)"
-          />
         </AppTouchable> */}
         <AppTouchable
           onClick={() => {

@@ -7,8 +7,8 @@ import FileAsset from '../helpers/file-manager/FileAsset';
 import { replaceArabicChars } from '../helpers';
 
 export default class UserApi {
-  public static sendPostVisit_Doctor(visit_id: string, return_cost: boolean): ResponseType<Visit[]> {
-    return Gateway.post('/api/users/postvisit_doctor', { visit_id, return_cost });
+  public static sendPostVisit_Doctor(visitId: string, returnCost: boolean): ResponseType<Visit[]> {
+    return Gateway.post('/api/users/postvisit_doctor', { visitId, returnCost });
   }
 
   public static sendPostVisit_Patient(rating: Rating): ResponseType<Visit[]> {

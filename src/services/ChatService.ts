@@ -69,7 +69,7 @@ const config: Partial<ManagerOptions & SocketOptions> = {
   },
 };
 
-export const socket = IO('https://www.azandaz.az', config);
+export const socket = IO('https://www.azdanaz.az', config);
 socket.io.on('packet', (packet) => packet /* && console.log(TAG, 'packet', packet.data) */);
 socket.io.on('open', () => {
   console.log(TAG, 'connection opened');

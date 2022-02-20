@@ -11,6 +11,7 @@ import R from '../assets/R';
 import FileAsset from '../helpers/file-manager/FileAsset';
 import AppModal from '../components/base/app-modal/AppModal';
 import { openCameraPicker, openImagePicker } from '../helpers/FilePickers';
+import dictionary from '../assets/strings/dictionary';
 
 interface Props {
   onRequestClose: () => void;
@@ -26,7 +27,7 @@ export default class ChatFilePickerModal extends React.Component<Props> {
     return (
       <AppModal onRequestClose={onRequestClose} animationType="slide" transparent={true} visible={modalVisible}>
         <AppView style={[{ height: hp(50), backgroundColor: '#FFFFFF', marginTop: hp(50), borderTopLeftRadius: hp(3), borderTopRightRadius: hp(3), alignItems: 'center', paddingHorizontal: '11.5%' }]}>
-          <ModalHeader text="انتخاب فایل" color="#50BCBD" onClosePress={closeModal} />
+          <ModalHeader text={dictionary['انتخاب فایل']} color="#50BCBD" onClosePress={closeModal} />
           <AppTouchable
             onClick={() => {
               this.openGalleryImageSelector(closeModal);
@@ -34,7 +35,7 @@ export default class ChatFilePickerModal extends React.Component<Props> {
             style={{ width: '100%', height: hp(9), borderColor: '#F2F2F2', borderBottomWidth: 2, flexDirection: 'row-reverse', alignItems: 'center', marginTop: hp(5) }}
           >
             <AppImageView resizeMode="contain" style={{ width: wp(8), height: wp(8), marginStart: wp(3) }} src={R.images.attachments.gallery} />
-            <AppTextView fontSize={wp(3.8)} textColor="#38488A" text="گالری" />
+            <AppTextView fontSize={wp(3.8)} textColor="#38488A" text={dictionary['گالری']} />
           </AppTouchable>
           <AppTouchable
             onClick={() => {
@@ -43,7 +44,7 @@ export default class ChatFilePickerModal extends React.Component<Props> {
             style={{ width: '100%', height: hp(9), borderColor: '#F2F2F2', borderBottomWidth: 2, flexDirection: 'row-reverse', alignItems: 'center' }}
           >
             <AppImageView resizeMode="contain" style={{ width: wp(8), height: wp(8), marginStart: wp(3) }} src={R.images.attachments.image_camera} />
-            <AppTextView fontSize={wp(3.8)} textColor="#38488A" text="دوربین" />
+            <AppTextView fontSize={wp(3.8)} textColor="#38488A" text={dictionary['دوربین']} />
           </AppTouchable>
           <AppTouchable
             onClick={() => {

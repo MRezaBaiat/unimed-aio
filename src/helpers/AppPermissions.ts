@@ -1,5 +1,4 @@
 import * as Permissions from 'expo-permissions';
-import { PermissionResponse } from 'expo-permissions';
 import { Platform } from 'react-native';
 
 enum PermissionTypes {

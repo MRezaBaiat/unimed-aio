@@ -14,6 +14,7 @@ import AppTouchable from '../../components/base/app-touchable/AppTouchable';
 import AppNavigator from '../../navigation/AppNavigator';
 import AppTextView from '../../components/base/app-text-view/AppTextView';
 import BottomTab from '../../components/composite/bottom_tab/BottomTab';
+import dictionary from '../../assets/strings/dictionary';
 
 function HealthCentersScreen() {
   const [centers, setCenters] = useState([] as HealthCenter[]);
@@ -31,7 +32,7 @@ function HealthCentersScreen() {
   }, []);
   return (
     <AppContainer keyboardVerticalOffset={-250} style={{ backgroundColor: '#38488A', flex: 1 }}>
-      <AppHeader text="کلینیک‌ها و بیمارستان‌ها" />
+      <AppHeader text={dictionary['کلینیک‌ها و بیمارستان‌ها']} />
       <AppView
         style={{
           height: hp(89),

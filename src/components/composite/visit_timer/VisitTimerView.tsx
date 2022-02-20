@@ -31,7 +31,7 @@ function VisitTimerView(props: Props) {
   useEffect(() => {
     const id = setInterval(() => {
       const now = smartDate().getTime();
-      const start = smartDate(visit.startDateUTC).getTime();
+      const start = smartDate(visit.createdAt).getTime();
       const duration = now - start;
       const remaining = visit.maxDurationMillisec - duration;
       const minutes = parseInt(String(remaining / 1000 / 60));

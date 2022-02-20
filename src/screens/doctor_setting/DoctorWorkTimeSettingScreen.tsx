@@ -18,6 +18,7 @@ import AppActivityIndicator from '../../components/base/app-activity-indicator/A
 import moment from 'jalali-moment';
 import { StyleSheet, ViewProps } from 'react-native';
 import ResponseTime from 'api/dist/src/models/response_time/ResponseTime';
+import dictionary from '../../assets/strings/dictionary';
 
 function DoctorWorkTimeSettingScreen() {
   const [workTime, setWorkTime] = useState([]);
@@ -88,7 +89,7 @@ function DoctorWorkTimeSettingScreen() {
 
   return (
     <AppContainer style={{ backgroundColor: '#50BCBD', flex: 1 }}>
-      <AppHeader text="انتخاب زمان مشاوره آنلاین" />
+      <AppHeader text={dictionary['انتخاب زمان مشاوره آنلاین']} />
       <AppView style={R.styles.container}>
         {loaded ? (
           <AppListView
@@ -105,9 +106,7 @@ function DoctorWorkTimeSettingScreen() {
                   {values.length > 0
                     ? values.map((wt, index) => {
                         const updateWT = (newWT) => {
-                          console.log('request', 'update to ', newWT);
                           const newValues = [...values];
-                          console.log(values, 'values');
                           newValues.splice(values.indexOf(wt), 1, newWT);
                           setWorkTime({ ...workTime, ...{ [sortDay]: newValues } });
                         };
@@ -144,7 +143,7 @@ function DoctorWorkTimeSettingScreen() {
             marginTop: hp(2),
           }}
         >
-          <AppTextView text="ثبت" fontSize={wp(3.8)} style={{ color: '#FFFFFF', fontFamily: R.fonts.fontFamily_Bold }} />
+          <AppTextView text={dictionary['ثبت']} fontSize={wp(3.8)} style={{ color: '#FFFFFF', fontFamily: R.fonts.fontFamily_Bold }} />
         </AppTouchable>
       </AppView>
     </AppContainer>
@@ -226,7 +225,7 @@ const renderNormal = ({ wt, updateWT, index, day, expanded, onDaySelected, onDel
             <HourTimeInput from={true} rt={wt} onUpdate={(res) => updateWT(res)} />
             <AppTextView style={styles.timeText} text=":" />
             <MinuteTimeInput from={true} rt={wt} onUpdate={(res) => updateWT(res)} />
-            <AppTextView style={styles.timeText} text="تا" />
+            <AppTextView style={styles.timeText} text={dictionary['تا']} />
             <HourTimeInput from={false} rt={wt} onUpdate={(res) => updateWT(res)} />
             <AppTextView style={styles.timeText} text=":" />
             <MinuteTimeInput from={false} rt={wt} onUpdate={(res) => updateWT(res)} />
@@ -240,7 +239,7 @@ const renderNormal = ({ wt, updateWT, index, day, expanded, onDaySelected, onDel
             }}
           >
             <AppTextView style={styles.timeText} text={`${wt.from.hour}:${wt.from.minute}`} />
-            <AppTextView style={styles.timeText} text="تا" />
+            <AppTextView style={styles.timeText} text={dictionary['تا']} />
             <AppTextView style={styles.timeText} text={`${wt.to.hour}:${wt.to.minute}`} />
           </AppView>
         )}
@@ -276,7 +275,7 @@ const renderNormal = ({ wt, updateWT, index, day, expanded, onDaySelected, onDel
                 fontSize: wp(3.3),
                 marginRight: wp(6),
               }}
-              text="حذف ساعت روز انتخاب شده"
+              text={dictionary['حذف ساعت روز انتخاب شده']}
             />
           </AppTouchable>
           <AppTouchable
@@ -308,7 +307,7 @@ const renderNormal = ({ wt, updateWT, index, day, expanded, onDaySelected, onDel
                 fontSize: wp(3.3),
                 marginRight: wp(6),
               }}
-              text="افزودن ساعت بیشتر در این روز"
+              text={dictionary['افزودن ساعت بیشتر در این روز']}
             />
           </AppTouchable>
         </Fragment>
@@ -352,7 +351,7 @@ const renderDisabled = ({ day, onDaySelected, updateWT }) => {
           color: '#9E9E9E',
           fontSize: wp(3.3),
         }}
-        text="انتخاب نشده"
+        text={dictionary['انتخاب نشده']}
       />
     </AppTouchable>
   );
