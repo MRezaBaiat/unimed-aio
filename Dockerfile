@@ -1,4 +1,4 @@
-FROM node:16.8.0 AS BUILD_IMAGE
+FROM node:16.13.2 AS BUILD_IMAGE
 
 WORKDIR '/dist'
 
