@@ -8,10 +8,11 @@ import R from '../../../assets/R';
 import { safeAssignStyles } from '../../../helpers';
 import { useIsFocused } from '@react-navigation/native';
 import AppActivityIndicator from '../../base/app-activity-indicator/AppActivityIndicator';
+import { DictRecord } from '../../../assets/strings/dictionary';
 
 interface Props {
   value: string;
-  placeHolder: string;
+  placeHolder: string | DictRecord;
   placeholderTextColor?: string;
   onChange: (text: string) => void;
   getResults: (text: string) => Promise<any>;
