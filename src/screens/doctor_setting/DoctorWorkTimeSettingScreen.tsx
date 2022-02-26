@@ -1,7 +1,6 @@
-//@ts-nocheck
 import React, { Fragment, memo, useEffect, useMemo, useState } from 'react';
 import UserApi from '../../network/UserApi';
-import { Helper, WorkTime } from 'api';
+import { Helper } from 'api';
 import R from '../../assets/R';
 import AppNavigator from '../../navigation/AppNavigator';
 import AppContainer from '../../components/base/app-container/AppContainer';
@@ -16,8 +15,6 @@ import AppTextInput from '../../components/base/app-text-input/AppTextInput';
 import Kit from 'javascript-dev-kit';
 import AppActivityIndicator from '../../components/base/app-activity-indicator/AppActivityIndicator';
 import moment from 'jalali-moment';
-import { StyleSheet, ViewProps } from 'react-native';
-import ResponseTime from 'api/dist/src/models/response_time/ResponseTime';
 import dictionary from '../../assets/strings/dictionary';
 
 function DoctorWorkTimeSettingScreen() {
@@ -25,11 +22,6 @@ function DoctorWorkTimeSettingScreen() {
   const [loaded, setLoaded] = useState(false);
   const [daySelected, setDaySelected] = useState('');
   const [fetching, setFetching] = useState(true);
-
-  const canUpdate = useMemo(() => {
-    const now = moment();
-    return now.hour() >= 9 && now.hour() < 23;
-  }, []);
 
   useEffect(() => {
     UserApi.getMyWorkTimes()
@@ -73,10 +65,6 @@ function DoctorWorkTimeSettingScreen() {
   };
 
   const patchWorkTime = () => {
-    if (!canUpdate) {
-      alert('به روز رسانی زمان پاسخگویی تنها بین ساعات 9 تا 23 امکان پذیر است');
-      return;
-    }
     UserApi.updateMyWorkTimes(workTime)
       .then((res) => {
         AppNavigator.goBack();
@@ -89,7 +77,7 @@ function DoctorWorkTimeSettingScreen() {
 
   return (
     <AppContainer style={{ backgroundColor: '#50BCBD', flex: 1 }}>
-      <AppHeader text={dictionary['انتخاب زمان مشاوره آنلاین']} />
+      <AppHeader text="انتخاب زمان مشاوره آنلاین" />
       <AppView style={R.styles.container}>
         {loaded ? (
           <AppListView
@@ -100,7 +88,7 @@ function DoctorWorkTimeSettingScreen() {
             }}
             renderItem={({ item }) => {
               const sortDay = _sortDay(item);
-              const values = workTime[sortDay] as any[];
+              const values = workTime[sortDay] as {}[];
               return (
                 <AppView>
                   {values.length > 0
@@ -143,7 +131,7 @@ function DoctorWorkTimeSettingScreen() {
             marginTop: hp(2),
           }}
         >
-          <AppTextView text={dictionary['ثبت']} fontSize={wp(3.8)} style={{ color: '#FFFFFF', fontFamily: R.fonts.fontFamily_Bold }} />
+          <AppTextView text="ثبت" fontSize={wp(3.8)} style={{ color: '#FFFFFF', fontFamily: R.fonts.fontFamily_Bold }} />
         </AppTouchable>
       </AppView>
     </AppContainer>
@@ -155,7 +143,7 @@ const Row = ({ wt, updateWT, index, day, selected, onDaySelected, onDelete, addW
   return state === 'normal' ? renderNormal({ wt, updateWT, index, day, expanded: day + index === selected, onDaySelected, onDelete, addWT }) : renderEditable(wt, index, day, selected, onDaySelected, onDelete);
 };
 
-const renderNormal = ({ wt, updateWT, index, day, expanded, onDaySelected, onDelete, addWT }: any) => {
+const renderNormal = ({ wt, updateWT, index, day, expanded, onDaySelected, onDelete, addWT }) => {
   return (
     <AppView
       style={[
@@ -210,7 +198,7 @@ const renderNormal = ({ wt, updateWT, index, day, expanded, onDaySelected, onDel
           }}
           textAlign="right"
           textColor="#38488A"
-          text={Helper.dayNumberToString(day,'az')}
+          text={Helper.dayNumberToString(day)}
         />
 
         {expanded ? (
@@ -222,13 +210,13 @@ const renderNormal = ({ wt, updateWT, index, day, expanded, onDaySelected, onDel
               alignItems: 'center',
             }}
           >
-            <HourTimeInput from={true} rt={wt} onUpdate={(res) => updateWT(res)} />
+            <HourTimeInput from={true} wt={wt} onUpdate={(res) => updateWT(res)} />
             <AppTextView style={styles.timeText} text=":" />
-            <MinuteTimeInput from={true} rt={wt} onUpdate={(res) => updateWT(res)} />
-            <AppTextView style={styles.timeText} text={dictionary['تا']} />
-            <HourTimeInput from={false} rt={wt} onUpdate={(res) => updateWT(res)} />
+            <MinuteTimeInput from={true} wt={wt} onUpdate={(res) => updateWT(res)} />
+            <AppTextView style={styles.timeText} text="تا" />
+            <HourTimeInput from={false} wt={wt} onUpdate={(res) => updateWT(res)} />
             <AppTextView style={styles.timeText} text=":" />
-            <MinuteTimeInput from={false} rt={wt} onUpdate={(res) => updateWT(res)} />
+            <MinuteTimeInput from={false} wt={wt} onUpdate={(res) => updateWT(res)} />
           </AppView>
         ) : (
           <AppView
@@ -239,7 +227,7 @@ const renderNormal = ({ wt, updateWT, index, day, expanded, onDaySelected, onDel
             }}
           >
             <AppTextView style={styles.timeText} text={`${wt.from.hour}:${wt.from.minute}`} />
-            <AppTextView style={styles.timeText} text={dictionary['تا']} />
+            <AppTextView style={styles.timeText} text="تا" />
             <AppTextView style={styles.timeText} text={`${wt.to.hour}:${wt.to.minute}`} />
           </AppView>
         )}
@@ -275,7 +263,7 @@ const renderNormal = ({ wt, updateWT, index, day, expanded, onDaySelected, onDel
                 fontSize: wp(3.3),
                 marginRight: wp(6),
               }}
-              text={dictionary['حذف ساعت روز انتخاب شده']}
+              text="حذف ساعت روز انتخاب شده"
             />
           </AppTouchable>
           <AppTouchable
@@ -341,7 +329,7 @@ const renderDisabled = ({ day, onDaySelected, updateWT }) => {
         }}
         textAlign="right"
         textColor="#4f4f4f"
-        text={Helper.dayNumberToString(day, 'az')}
+        text={Helper.dayNumberToString(day)}
       />
 
       <AppTextView
@@ -351,40 +339,43 @@ const renderDisabled = ({ day, onDaySelected, updateWT }) => {
           color: '#9E9E9E',
           fontSize: wp(3.3),
         }}
-        text={dictionary['انتخاب نشده']}
+        text="انتخاب نشده"
       />
     </AppTouchable>
   );
 };
 
-const MinuteTimeInput = ({ rt, onUpdate, from }: { rt: ResponseTime; onUpdate: (rt: ResponseTime) => void; from: boolean }) => {
+const renderEditable = (wt, index, day, selected, onDaySelected, onDelete) => {};
+
+const MinuteTimeInput = ({ wt, onUpdate, from }) => {
+  console.log('rendering', wt);
   return (
     <AppTextInput
       style={{ ...styles.timeText }}
       textStyle={{ fontSize: wp(3.3), fontFamily: R.fonts.fontFamily_faNum }}
       keyboardType="number-pad"
       maxLength={2}
-      value={from ? rt.from.minute : rt.to.minute}
+      value={from ? wt.from.minute : wt.to.minute}
       onChange={(value) => {
         const numreg = /^[0-9]+$/;
 
         const minute = numreg.test(Kit.numbersToEnglish(value)) && parseInt(value) <= 59 ? value : '';
         if (from) {
-          onUpdate({ ...rt, from: { hour: rt.from.hour, minute: minute } });
+          onUpdate({ ...wt, from: { hour: wt.from.hour, minute: minute } });
         } else {
-          onUpdate({ ...rt, to: { hour: rt.to.hour, minute: minute } });
+          onUpdate({ ...wt, to: { hour: wt.to.hour, minute: minute } });
         }
       }}
     />
   );
 };
 
-const HourTimeInput = ({ rt, onUpdate, from }: { rt: ResponseTime; onUpdate: (rt: ResponseTime) => void; from: boolean }) => {
+const HourTimeInput = ({ wt, onUpdate, from }) => {
   return (
     <AppTextInput
       style={{ ...styles.timeText }}
       textStyle={{ fontSize: wp(3.3), fontFamily: R.fonts.fontFamily_faNum }}
-      value={from ? rt.from.hour : rt.to.hour}
+      value={from ? wt.from.hour : wt.to.hour}
       maxLength={2}
       keyboardType="number-pad"
       onChange={(value) => {
@@ -393,16 +384,16 @@ const HourTimeInput = ({ rt, onUpdate, from }: { rt: ResponseTime; onUpdate: (rt
         const hour = numreg.test(Kit.numbersToEnglish(value)) && parseInt(value) <= 23 ? value : '';
 
         if (from) {
-          onUpdate({ ...rt, from: { hour: hour, minute: rt.from.minute } });
+          onUpdate({ ...wt, from: { hour: hour, minute: wt.from.minute } });
         } else {
-          onUpdate({ ...rt, to: { hour: hour, minute: rt.to.minute } });
+          onUpdate({ ...wt, to: { hour: hour, minute: wt.to.minute } });
         }
       }}
     />
   );
 };
 
-const styles = StyleSheet.create({
+const styles = {
   enable: {
     width: wp(92),
     borderColor: '#38488A',
@@ -421,7 +412,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: hp(2),
     backgroundColor: '#f2f2f2',
-  } as ViewProps,
+  },
   timeText: {
     fontFamily: R.fonts.fontFamily_faNum,
     fontSize: wp(3.3),
@@ -429,5 +420,5 @@ const styles = StyleSheet.create({
     color: '#38488A',
     maxWidth: 100,
   },
-});
+};
 export default memo(DoctorWorkTimeSettingScreen);
