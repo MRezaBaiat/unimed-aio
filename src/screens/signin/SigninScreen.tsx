@@ -24,7 +24,7 @@ function SigninScreen(props) {
   const [tcModalVisible, setTCModalVisible] = useState(false);
 
   const login = () => {
-    if (mobile.length > 11 || mobile.length < 10) {
+    if (mobile.length > 11 || mobile.length < 5) {
       return ToastMaster.makeText(dictionary.phone_not_valid);
     }
     const phoneNumber = (preMobile + mobile).replaceAll(' ', '').replaceAll('+', '');
