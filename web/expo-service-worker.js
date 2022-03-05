@@ -4,7 +4,7 @@
  * Store notification icon string in service worker.
  * Ref: https://stackoverflow.com/a/35729334/2603230
  */
-const SW_VERSION = '1.0.12';
+const SW_VERSION = '1.0.13';
 const TAG = '[service-worker]';
 console.log(TAG, 'service worker started with version ' + SW_VERSION);
 
