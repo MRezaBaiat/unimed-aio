@@ -267,12 +267,12 @@ const translations = {
 
 const copy = { ...translations };
 
-export function setLanguage(lang: 'fa' | 'en') {
+export function setLanguage(lang: 'az' | 'en') {
   Object.keys(copy).forEach((key) => {
     translations[key] = copy[key][lang];
   });
 }
 
-setLanguage('fa');
+setLanguage('az');
 
 export default translations;

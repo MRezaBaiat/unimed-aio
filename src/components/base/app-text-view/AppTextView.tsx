@@ -18,6 +18,7 @@ export interface Props extends TextProps {
 function AppTextView(props: Props) {
   const { text, textColor, backgroundColor, fontSize, style, textAlign } = props;
   const lang = useLang();
+  console.log('LANG', lang);
   /* const [loaded] = useFonts(Kit.toObject(Object.values(R.fonts), (value, createdObject) => {
     return {
       key: value,

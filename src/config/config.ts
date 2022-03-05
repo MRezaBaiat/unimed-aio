@@ -13,12 +13,12 @@ const getNewPatientVoiceMode = (): 'notification' | 'voice' => {
   return Storage.get('voice_mode_2') || 'voice';
 };
 
-const saveLanguage = (lang: 'fa' | 'en') => {
+const saveLanguage = (lang: 'az' | 'en') => {
   Storage.set('language', lang);
 };
 
-const readLanguage = (): 'fa' | 'en' => {
-  return Storage.get('language') || 'fa';
+const readLanguage = (): 'az' | 'en' => {
+  return Storage.get('language') || 'az';
 };
 
 export default {

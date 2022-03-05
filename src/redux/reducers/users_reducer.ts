@@ -13,7 +13,7 @@ const initialState: InitialState = {
   status: null as any,
   finalizableVisits: [],
   isIpAllowed: true,
-  lang: 'fa',
+  lang: 'az',
 };
 
 const userReducer = (state = initialState, action: { type: any; payload: any }) => {

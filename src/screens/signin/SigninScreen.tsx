@@ -27,7 +27,9 @@ function SigninScreen(props) {
     if (mobile.length > 11 || mobile.length < 10) {
       return ToastMaster.makeText(dictionary.phone_not_valid);
     }
-    AuthService.signIn(preMobile === '98' ? (mobile.length === 10 ? `0${mobile}` : `${mobile}`) : `00${preMobile}${mobile.length === 10 ? mobile : mobile.slice(1, 10)}`)
+    const phoneNumber = (preMobile + mobile).replaceAll(' ', '').replaceAll('+', '');
+    console.log(phoneNumber);
+    AuthService.signIn(phoneNumber)
       .then((res) => {
         console.log('res');
         setModalVisible(true);

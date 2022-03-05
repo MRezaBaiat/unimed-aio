@@ -1,953 +1,953 @@
 const dictionary = {
   app_name: {
     en: 'UniMed',
-    fa: 'UniMed',
+    az: 'UniMed',
   },
   enter: {
     en: 'Enter',
-    fa: 'giriş',
+    az: 'giriş',
   },
   phone_number: {
     en: 'Mobile Number',
-    fa: 'Mobil nömrəsi',
+    az: 'Mobil nömrəsi',
   },
   send_code: {
     en: 'Send Code',
-    fa: 'kodu göndərin',
+    az: 'kodu göndərin',
   },
   receive_code: {
     en: 'Receive Code',
-    fa: 'kodu almaq',
+    az: 'kodu almaq',
   },
   rereceive_code: {
     en: 'Rereceive Code',
-    fa: 'Kodu yenidən qəbul edin',
+    az: 'Kodu yenidən qəbul edin',
   },
   activation_code: {
     en: 'Activation Code',
-    fa: 'Aktivləşdirmə kodu',
+    az: 'Aktivləşdirmə kodu',
   },
   resend_code: {
     en: 'Resend Code',
-    fa: 'Kodu yenidən göndərmək',
+    az: 'Kodu yenidən göndərmək',
   },
   okay: {
     en: 'OK',
-    fa: 'tamam',
+    az: 'tamam',
   },
   doctor_code: {
     en: "Enter the doctor's code",
-    fa: 'Həkim kodunu daxil edin',
+    az: 'Həkim kodunu daxil edin',
   },
   main_screen_title: {
     en: 'Follow-up treatment',
-    fa: 'Müalicəni izləyin',
+    az: 'Müalicəni izləyin',
   },
   health_centers: {
     en: 'Health centers',
-    fa: 'Sağlamlıq mərkəzləri',
+    az: 'Sağlamlıq mərkəzləri',
   },
   med_and_nurs_serv_at_home: {
     en: 'Nursing services at home',
-    fa: 'Evdə tibb bacısı xidmətləri',
+    az: 'Evdə tibb bacısı xidmətləri',
   },
   doctors_abroad: {
     en: 'Doctors abroad',
-    fa: 'Xaricdə Həkimlər',
+    az: 'Xaricdə Həkimlər',
   },
   medical_services: {
     en: 'Medical services',
-    fa: 'Tibbi xidmətlər',
+    az: 'Tibbi xidmətlər',
   },
   medical_services_desc: {
     en: 'Medical services description',
-    fa: 'Tibbi xidmətlərin təsviri',
+    az: 'Tibbi xidmətlərin təsviri',
   },
   next: {
     en: 'Next',
-    fa: 'sonra',
+    az: 'sonra',
   },
   enter_personal_information: {
     en: 'Enter personal information',
-    fa: 'Şəxsi məlumatları daxil edin',
+    az: 'Şəxsi məlumatları daxil edin',
   },
   personal_information: {
     en: 'Personal information',
-    fa: 'Şəxsi məlumatlar',
+    az: 'Şəxsi məlumatlar',
   },
   gender: {
     en: 'Gender',
-    fa: 'cins',
+    az: 'cins',
   },
   male: {
     en: 'Male',
-    fa: 'kişi',
+    az: 'kişi',
   },
   female: {
     en: 'Female',
-    fa: 'qadin',
+    az: 'qadin',
   },
   age: {
     en: 'Age',
-    fa: 'yaş',
+    az: 'yaş',
   },
   full_name: {
     en: 'Full name',
-    fa: 'ad və soyad',
+    az: 'ad və soyad',
   },
   description: {
     en: 'Description',
-    fa: 'Sorğu Təsviri:',
+    az: 'Sorğu Təsviri:',
   },
   confirmation: {
     en: 'Accept',
-    fa: 'Təsdiq',
+    az: 'Təsdiq',
   },
   cancel: {
     en: 'Cancel',
-    fa: 'ləğv et',
+    az: 'ləğv et',
   },
 
   tracking_code: {
     en: 'Tracking code',
-    fa: 'İzləmə Kodu',
+    az: 'İzləmə Kodu',
   },
   please_note_the_tracking_code: {
     en: 'Please note the tracking code',
-    fa: 'İzləmə kodunu yadda saxlayın',
+    az: 'İzləmə kodunu yadda saxlayın',
   },
   copy_in_clipboard: {
     en: 'Copy in clipboard',
-    fa: 'Mobil yaddaşa kopyalayın',
+    az: 'Mobil yaddaşa kopyalayın',
   },
   copy_in_clipboard_success: {
     en: 'The tracking code was successfully copied to the clipboard',
-    fa: 'İzləmə kodu buferə uğurla kopyalandı',
+    az: 'İzləmə kodu buferə uğurla kopyalandı',
   },
   info_success_recorded: {
     en: 'Information successfully recorded',
-    fa: 'Məlumat uğurla qeydə alınıb',
+    az: 'Məlumat uğurla qeydə alınıb',
   },
   expert_will_contact: {
     en: 'Experts will contact you as soon as possible',
-    fa: 'Mütəxəssislər ən qısa zamanda sizinlə əlaqə saxlayacaqlar',
+    az: 'Mütəxəssislər ən qısa zamanda sizinlə əlaqə saxlayacaqlar',
   },
   fill_all_fields: {
     en: 'Please fill in all fields',
-    fa: 'Zəhmət olmasa bütün sahələri doldurun',
+    az: 'Zəhmət olmasa bütün sahələri doldurun',
   },
   phone_not_valid: {
     en: 'Phone number is not valid',
-    fa: 'Mobil nömrə səhvdir',
+    az: 'Mobil nömrə səhvdir',
   },
   error_sending_file: {
     en: 'Error sending file',
-    fa: 'Fayl göndərilərkən xəta baş verdi',
+    az: 'Fayl göndərilərkən xəta baş verdi',
   },
   success_removed: {
     en: 'Successfully removed',
-    fa: 'Uğurla silindi',
+    az: 'Uğurla silindi',
   },
   success_added: {
     en: 'Successfully added',
-    fa: 'Uğurla əlavə edildi',
+    az: 'Uğurla əlavə edildi',
   },
   doctor_setting: {
     en: "Doctor's setting",
-    fa: 'həkimlərin təyini',
+    az: 'həkimlərin təyini',
   },
   share: {
     en: 'Share',
-    fa: 'paylaş',
+    az: 'paylaş',
   },
   credit: {
     en: 'Credit',
-    fa: 'Kredit',
+    az: 'Kredit',
   },
   visit_history: {
     en: 'Visit history',
-    fa: 'Əlaqə qeydləri',
+    az: 'Əlaqə qeydləri',
   },
   transaction_history: {
     en: 'Transaction history',
-    fa: 'Ödəniş qeydləri',
+    az: 'Ödəniş qeydləri',
   },
   requests_list: {
     en: 'Requests list',
-    fa: 'Müraciətlərin siyahısı',
+    az: 'Müraciətlərin siyahısı',
   },
   doctors_list: {
     en: 'Doctors list',
-    fa: 'Həkimlərin siyahısı',
+    az: 'Həkimlərin siyahısı',
   },
   profile: {
     en: 'Profile',
-    fa: 'profil',
+    az: 'profil',
   },
   patient_profile: {
     en: 'Patient profile',
-    fa: 'Xəstə profili',
+    az: 'Xəstə profili',
   },
   setting: {
     en: 'Setting',
-    fa: 'parametrlər',
+    az: 'parametrlər',
   },
   exit: {
     en: 'Exit',
-    fa: 'çıxış',
+    az: 'çıxış',
   },
   search: {
     en: 'Search',
-    fa: 'axtarış',
+    az: 'axtarış',
   },
   update: {
     en: 'Update',
-    fa: 'yeniləmə',
+    az: 'yeniləmə',
   },
   select_language: {
     en: 'Select language',
-    fa: 'dil seçin',
+    az: 'dil seçin',
   },
   charge_by_admin: {
     en: 'Charge by admin',
-    fa: 'Admin tərəfindən depozit',
+    az: 'Admin tərəfindən depozit',
   },
   reduce_by_admin: {
     en: 'Reduce by admin',
-    fa: 'Admin tərəfindən azaldılıb',
+    az: 'Admin tərəfindən azaldılıb',
   },
   payment_by_bank_portal: {
     en: 'Payment by bank portal',
-    fa: 'Bank portalı ilə ödəniş',
+    az: 'Bank portalı ilə ödəniş',
   },
   gift: {
     en: 'UniMed gift',
-    fa: 'UniMed hədiyyə',
+    az: 'UniMed hədiyyə',
   },
   for_salary: {
     en: 'salary',
-    fa: 'maaş',
+    az: 'maaş',
   },
   visit_payment: {
     en: 'Visit payment',
-    fa: 'Həkimin ziyarətinin miqdarı',
+    az: 'Həkimin ziyarətinin miqdarı',
   },
   return_visit_payment: {
     en: 'Return visit payment',
-    fa: 'Həkimin ziyarətinin məbləğin qayıtmaq',
+    az: 'Həkimin ziyarətinin məbləğin qayıtmaq',
   },
   service_request_payment: {
     en: 'Service request payment',
-    fa: 'Xidmət sorğusu ödənişi',
+    az: 'Xidmət sorğusu ödənişi',
   },
   deposite: {
     en: 'Deposite',
-    fa: 'Hesaba depozit',
+    az: 'Hesaba depozit',
   },
   withdraw: {
     en: 'Withdraw',
-    fa: 'Hesabınızdan çıxarılması',
+    az: 'Hesabınızdan çıxarılması',
   },
   toman: {
     en: 'Manat',
-    fa: 'Manat',
+    az: 'Manat',
   },
   amount: {
     en: 'Amount',
-    fa: 'Məbləğ',
+    az: 'Məbləğ',
   },
   for: {
     en: 'For',
-    fa: 'üçün',
+    az: 'üçün',
   },
   pay_for_consultation: {
     en: 'Pay for consultation',
-    fa: 'Konsultasiya üçün ödəniş edin',
+    az: 'Konsultasiya üçün ödəniş edin',
   },
   your_credit: {
     en: 'Your credit',
-    fa: 'kreditiniz',
+    az: 'kreditiniz',
   },
   payable_amount: {
     en: 'Payable amount',
-    fa: 'Ödəniləcək məbləği',
+    az: 'Ödəniləcək məbləği',
   },
   discount_code: {
     en: 'Discount Code',
-    fa: 'Endirim kodu',
+    az: 'Endirim kodu',
   },
   pay: {
     en: 'Pay',
-    fa: 'ödəniş',
+    az: 'ödəniş',
   },
   cancel_request: {
     en: 'Cancel Request',
-    fa: 'Sorğunu ləğv edin',
+    az: 'Sorğunu ləğv edin',
   },
   your_position_queue: {
     en: 'Your position in the queue',
-    fa: 'Növbədəki mövqeyiniz',
+    az: 'Növbədəki mövqeyiniz',
   },
   your_average_waiting_time: {
     en: 'Your average waiting time',
-    fa: 'Orta gözləmə vaxtınız',
+    az: 'Orta gözləmə vaxtınız',
   },
   minutes: {
     en: 'Minutes',
-    fa: 'dəqiqə',
+    az: 'dəqiqə',
   },
   end_of_conversation: {
     en: 'End',
-    fa: 'son',
+    az: 'son',
   },
   press_again_for_exit: {
     en: 'Press again for exit',
-    fa: 'Çıxmaq üçün yenidən basın',
+    az: 'Çıxmaq üçün yenidən basın',
   },
   survey: {
     en: 'Survey',
-    fa: 'Sorğu',
+    az: 'Sorğu',
   },
   survey_top_text: {
     en: 'Survey',
-    fa: 'Öz sağlamlığınız üçün mütəxəssis həkimlərimizlə\n' + 'məsləhətləşdiyiniz üçün təşəkkür edirik\n' + 'Xahiş edirik, sorğularda iştirak edərək və həkimlərə\n' + 'bal verməklə daha yaxşı olmağımıza kömək edin',
+    az: 'Öz sağlamlığınız üçün mütəxəssis həkimlərimizlə\n' + 'məsləhətləşdiyiniz üçün təşəkkür edirik\n' + 'Xahiş edirik, sorğularda iştirak edərək və həkimlərə\n' + 'bal verməklə daha yaxşı olmağımıza kömək edin',
   },
   unimed_service_survey: {
     en: 'How satisfied are you with the services received from UniMed?',
-    fa: 'UniMed-dan alınan xidmətlərdən nə dərəcədə razısınız?',
+    az: 'UniMed-dan alınan xidmətlərdən nə dərəcədə razısınız?',
   },
   quality_survey: {
     en: 'How satisfied were you with the sound or image quality?',
-    fa: 'Səs və ya şəkil keyfiyyətindən nə dərəcədə razısınız?',
+    az: 'Səs və ya şəkil keyfiyyətindən nə dərəcədə razısınız?',
   },
   doctoe_survey: {
     en: "Was the doctor's explanation for your problem clear?",
-    fa: 'Probleminiz üçün həkimin izahı aydın idimi?',
+    az: 'Probleminiz üçün həkimin izahı aydın idimi?',
   },
   excellent: {
     en: 'Excellent',
-    fa: 'Əla',
+    az: 'Əla',
   },
   good: {
     en: 'Good',
-    fa: 'Yaxşı',
+    az: 'Yaxşı',
   },
   medium: {
     en: 'Medium',
-    fa: 'orta',
+    az: 'orta',
   },
   weak: {
     en: 'Weak',
-    fa: 'Zəif',
+    az: 'Zəif',
   },
   submit: {
     en: 'Submit',
-    fa: 'Qeyd',
+    az: 'Qeyd',
   },
   title: {
     en: 'Title',
-    fa: 'Başlıq',
+    az: 'Başlıq',
   },
   status: {
     en: 'Status',
-    fa: 'Vəziyyət',
+    az: 'Vəziyyət',
   },
   Waiting_in_line: {
     en: 'Waiting in line',
-    fa: 'Gözləmə siyahısında',
+    az: 'Gözləmə siyahısında',
   },
   payment_made: {
     en: 'Payment made',
-    fa: 'Ödəniş həyata keçirilib',
+    az: 'Ödəniş həyata keçirilib',
   },
   processign: {
     en: 'Processing',
-    fa: 'emal etmə',
+    az: 'emal etmə',
   },
   ended: {
     en: 'Ended',
-    fa: 'Bitdi',
+    az: 'Bitdi',
   },
   waiting_payment: {
     en: 'Waiting Payment',
-    fa: 'Ödəniş gözləyir',
+    az: 'Ödəniş gözləyir',
   },
   checking: {
     en: 'Cheking',
-    fa: 'Nəzərdən keçirilir',
+    az: 'Nəzərdən keçirilir',
   },
   clinics_and_hospitals: {
     en: 'Clinics and hospitals',
-    fa: 'Xəstəxanalar və klinikalar',
+    az: 'Xəstəxanalar və klinikalar',
   },
   clinic_or_hospital: {
     en: 'Clinic or hospital',
-    fa: 'Xəstəxanalar və ya klinikalar‌',
+    az: 'Xəstəxanalar və ya klinikalar‌',
   },
   response_days: {
     en: 'Response days',
-    fa: 'Cavab verən günlər',
+    az: 'Cavab verən günlər',
   },
   list_end: {
     en: 'List end',
-    fa: 'siyahının sonu',
+    az: 'siyahının sonu',
   },
   active_soon: {
     en: 'Active soon',
-    fa: 'Tezliklə aktiv',
+    az: 'Tezliklə aktiv',
   },
   service_requested: {
     en: 'Service Requested',
-    fa: 'Tələb olunan xidmət',
+    az: 'Tələb olunan xidmət',
   },
   responsiveness: {
     en: 'Responsiveness',
-    fa: 'cavabde olmaq',
+    az: 'cavabde olmaq',
   },
   active: {
     en: 'Active',
-    fa: 'aktiv',
+    az: 'aktiv',
   },
   not_active: {
     en: 'Not active',
-    fa: 'aktiv deyil',
+    az: 'aktiv deyil',
   },
   select_day: {
     en: 'Select Day',
-    fa: 'maaş günü',
+    az: 'maaş günü',
   },
   sunday: {
     en: 'Sunday',
-    fa: 'bazar günü',
+    az: 'bazar günü',
   },
   monday: {
     en: 'Monday',
-    fa: 'bazar ertəsi',
+    az: 'bazar ertəsi',
   },
   tuesday: {
     en: 'Tuesday',
-    fa: 'çərşənbə axşamı',
+    az: 'çərşənbə axşamı',
   },
   wednesday: {
     en: 'Wednesday',
-    fa: 'çərşənbə',
+    az: 'çərşənbə',
   },
   thursday: {
     en: 'Thursday',
-    fa: 'cümə axşamı',
+    az: 'cümə axşamı',
   },
   friday: {
     en: 'Friday',
-    fa: 'cümə',
+    az: 'cümə',
   },
   saturday: {
     en: 'Saturday',
-    fa: 'şənbə',
+    az: 'şənbə',
   },
   from: {
     en: 'From',
-    fa: '-dən',
+    az: '-dən',
   },
   to: {
     en: 'To',
-    fa: 'qədər',
+    az: 'qədər',
   },
   add_work_time: {
     en: 'Add work time',
-    fa: 'İş vaxtı əlavə edin',
+    az: 'İş vaxtı əlavə edin',
   },
   sound_setting: {
     en: 'Sound Setting',
-    fa: 'Səs Parametri',
+    az: 'Səs Parametri',
   },
   play_new_patient_notifications: {
     en: 'Play new patient notifications with',
-    fa: 'Yeni xəstə bildirişləri ilə oynayın',
+    az: 'Yeni xəstə bildirişləri ilə oynayın',
   },
   default_sound: {
     en: 'Default Sound',
-    fa: 'Defolt Səs',
+    az: 'Defolt Səs',
   },
   unimed_special: {
     en: 'UniMed special sound',
-    fa: 'UniMed xüsusi səs',
+    az: 'UniMed xüsusi səs',
   },
   response_times_setting: {
     en: 'Response time setting',
-    fa: 'Cavab vaxtı təyini',
+    az: 'Cavab vaxtı təyini',
   },
   error_connecting: {
     en: 'Error connection',
-    fa: 'xəta bağlantısı',
+    az: 'xəta bağlantısı',
   },
   success_profile_update: {
     en: 'Profile updated successfully',
-    fa: 'Profil uğurla yeniləndi',
+    az: 'Profil uğurla yeniləndi',
   },
   success_request_cancel: {
     en: 'Your request has been successfully canceled',
-    fa: 'Sorğunuz uğurla ləğv edildi',
+    az: 'Sorğunuz uğurla ləğv edildi',
   },
   receive_visit_fee: {
     en: 'Receive a visit fee?',
-    fa: 'Ziyarət haqqı alın?',
+    az: 'Ziyarət haqqı alın?',
   },
   yes: {
     en: 'Yes',
-    fa: 'Bəli',
+    az: 'Bəli',
   },
   no: {
     en: 'No',
-    fa: 'Yox',
+    az: 'Yox',
   },
   voice_call: {
     en: 'Voice call',
-    fa: 'Səsli zəng',
+    az: 'Səsli zəng',
   },
   camera: {
     en: 'Camera',
-    fa: 'kamera',
+    az: 'kamera',
   },
   gallery: {
     en: 'Gallery',
-    fa: 'Qalereya',
+    az: 'Qalereya',
   },
   an_update_is_available: {
     en: 'An update is available',
-    fa: 'Yeniləmə mövcuddur',
+    az: 'Yeniləmə mövcuddur',
   },
   download: {
     en: 'Download',
-    fa: 'yükləyin',
+    az: 'yükləyin',
   },
   later: {
     en: 'Later',
-    fa: 'Sonra',
+    az: 'Sonra',
   },
   will_response_request: {
     en: 'They will respond to your request soon',
-    fa: 'Tezliklə sorğunuza cavab verəcəklər',
+    az: 'Tezliklə sorğunuza cavab verəcəklər',
   },
   check_internet_connection: {
     en: 'Please check your internet connection and try again',
-    fa: 'İnternet bağlantınızı yoxlayın və yenidən cəhd edin',
+    az: 'İnternet bağlantınızı yoxlayın və yenidən cəhd edin',
   },
   persian: {
     en: 'Azerbaijani',
-    fa: 'Azərbaycanlı',
+    az: 'Azərbaycanlı',
   },
   english: {
-    fa: 'English',
+    az: 'English',
     en: 'English',
   },
   farsi: {
-    fa: 'Azerbaijani',
+    az: 'Azerbaijani',
     en: 'Azərbaycanlı',
   },
   language: {
     en: 'Language',
-    fa: 'Dil',
+    az: 'Dil',
   },
   language_setting: {
     en: 'Language setting',
-    fa: 'Dil ayarı',
+    az: 'Dil ayarı',
   },
   dont_know_the_doctor_code: {
     en: "I don't know the doctor's code.",
-    fa: 'Mən həkim kodunu bilmirəm',
+    az: 'Mən həkim kodunu bilmirəm',
   },
   no_payment_history_record: {
-    fa: 'ödəniş tarixi qeydi yoxdur',
+    az: 'ödəniş tarixi qeydi yoxdur',
   },
   receive_visit_payment: {
-    fa: 'ziyarət ödənişini almaq',
+    az: 'ziyarət ödənişini almaq',
   },
   date: {
-    fa: 'Tarix',
+    az: 'Tarix',
   },
   hour: {
-    fa: 'Saat',
+    az: 'Saat',
   },
   error_accessing_server: {
-    fa: 'serverə daxil olma xətası',
+    az: 'serverə daxil olma xətası',
   },
   drag_to_cancel: {
-    fa: 'ləğv etmək üçün dartın',
+    az: 'ləğv etmək üçün dartın',
   },
   no_visits_history_record: {
-    fa: 'məsləhət tarixi yoxdur',
+    az: 'məsləhət tarixi yoxdur',
   },
   cancelled: {
-    fa: 'ləğv edildi',
+    az: 'ləğv edildi',
   },
   enter_personal_info: {
-    fa: 'şəxsi məlumatları daxil edin',
+    az: 'şəxsi məlumatları daxil edin',
   },
   save_personal_info: {
-    fa: 'şəxsi məlumatları saxla',
+    az: 'şəxsi məlumatları saxla',
   },
   calling_to: {
-    fa: '-a zəng edir',
+    az: '-a zəng edir',
   },
   connecting: {
-    fa: 'Qoşulur',
+    az: 'Qoşulur',
   },
   video_calling_to: {
-    fa: '-a video zəng',
+    az: '-a video zəng',
   },
   call_support: {
-    fa: 'dəstəyə zəng edin',
+    az: 'dəstəyə zəng edin',
   },
   sending_request: {
-    fa: 'sorğu göndərilməsi',
+    az: 'sorğu göndərilməsi',
   },
   enter_mobile_for_otp: {
-    fa: 'Qeydiyyatdan keçmək üçün mobil nömrənizi daxil edin',
+    az: 'Qeydiyyatdan keçmək üçün mobil nömrənizi daxil edin',
   },
   welcome_to_unimed: {
-    fa: 'UniMed-a xoş gəlmisiniz',
+    az: 'UniMed-a xoş gəlmisiniz',
   },
   mobile_number: {
-    fa: 'mobil nömrə',
+    az: 'mobil nömrə',
   },
   announcements: {
-    fa: 'Elanlar',
+    az: 'Elanlar',
   },
   financial_records: {
-    fa: 'Maliyyə qeydləri',
+    az: 'Maliyyə qeydləri',
   },
   patience_in_queue: {
-    fa: 'Xəstə cavab gözləyir',
+    az: 'Xəstə cavab gözləyir',
   },
   response_time: {
-    fa: 'Cavab vaxtı',
+    az: 'Cavab vaxtı',
   },
   other: {
-    fa: 'Başqa',
+    az: 'Başqa',
   },
   profile_settings: {
-    fa: 'profil parametri',
+    az: 'profil parametri',
   },
   personal_account_info: {
-    fa: 'şəxsi hesab məlumatları',
+    az: 'şəxsi hesab məlumatları',
   },
   seconds_until_resubmission: {
-    fa: ' saniyə, yenidən təqdim olunana qədər',
+    az: ' saniyə, yenidən təqdim olunana qədər',
   },
   code: {
-    fa: 'kod',
+    az: 'kod',
   },
   talking: {
-    fa: 'Danışır',
+    az: 'Danışır',
   },
   pay_for_visit: {
-    fa: 'Məsləhət üçün ödəyin',
+    az: 'Məsləhət üçün ödəyin',
   },
   enter_otp: {
-    fa: 'SMS kodunu buraya daxil edin',
+    az: 'SMS kodunu buraya daxil edin',
   },
   enter_6_digits_code: {
-    fa: '6 rəqəmli kodu buraya daxil edin',
+    az: '6 rəqəmli kodu buraya daxil edin',
   },
   change_number: {
-    fa: 'Mobil nömrəni dəyişdirin',
+    az: 'Mobil nömrəni dəyişdirin',
   },
   otp_error: {
-    fa: 'Kod səhvdir',
+    az: 'Kod səhvdir',
   },
   visit_price: {
-    fa: 'Məsləhət haqqı',
+    az: 'Məsləhət haqqı',
   },
   confirm: {
-    fa: 'Təsdiq',
+    az: 'Təsdiq',
   },
   receiving_video_call_from: {
-    fa: '-dən video zəngləri qəbul edirsiniz',
+    az: '-dən video zəngləri qəbul edirsiniz',
   },
   doctors: {
-    fa: 'Hakimlər',
+    az: 'Hakimlər',
   },
   end_visit: {
-    fa: 'Məsləhətləşmə bitdi',
+    az: 'Məsləhətləşmə bitdi',
   },
   currency_unit: {
-    fa: 'Manat',
+    az: 'Manat',
   },
   should_receive_payment_from_patient: {
-    fa: 'Bu zəngin dəyəri xəstə üçün nəzərə alınmalıdır?',
+    az: 'Bu zəngin dəyəri xəstə üçün nəzərə alınmalıdır?',
   },
   sound_settings: {
-    fa: 'səs parametrləri',
+    az: 'səs parametrləri',
   },
   deleted_doctor: {
-    fa: 'həkimi silindi',
+    az: 'həkimi silindi',
   },
   terms_and_conditions: {
-    fa: 'Şərtlər və Qaydalar',
+    az: 'Şərtlər və Qaydalar',
   },
   survey_question_1: {
-    fa: 'Aldığınız xidmətlərdən nə dərəcədə razısınız?',
+    az: 'Aldığınız xidmətlərdən nə dərəcədə razısınız?',
   },
   survey_question_2: {
-    fa: 'Səs və ya şəkil keyfiyyətindən nə dərəcədə razı qaldınız?',
+    az: 'Səs və ya şəkil keyfiyyətindən nə dərəcədə razı qaldınız?',
   },
   survey_question_3: {
-    fa: 'Probleminizlə bağlı həkimin izahatı kifayət etdimi?',
+    az: 'Probleminizlə bağlı həkimin izahatı kifayət etdimi?',
   },
   submit_comment: {
-    fa: 'Rəy bildir',
+    az: 'Rəy bildir',
   },
   soon_your_call_with: {
-    fa: ' ,tezliklə sizinlə zəng edin',
+    az: ' ,tezliklə sizinlə zəng edin',
   },
   will_establish: {
-    fa: 'qurulacaq',
+    az: 'qurulacaq',
   },
   estimated_queue_time: {
-    fa: 'təxmini növbə vaxtı',
+    az: 'təxmini növbə vaxtı',
   },
   quantity_in_queue: {
-    fa: 'növbədə olan miqdar',
+    az: 'növbədə olan miqdar',
   },
   N: {
-    fa: 'nəfər',
+    az: 'nəfər',
   },
   last_patient_waiting_time: {
-    fa: 'son xəstənin gözləmə müddəti',
+    az: 'son xəstənin gözləmə müddəti',
   },
   by_registering: {
-    fa: 'UniMed proqramında qeydiyyatdan keçməklə ',
+    az: 'UniMed proqramında qeydiyyatdan keçməklə ',
   },
   signin_conditions: {
-    fa: 'mən üzvlük şərtlərini ',
+    az: 'mən üzvlük şərtlərini ',
   },
   that_accept: {
-    fa: 'qəbul edirəm',
+    az: 'qəbul edirəm',
   },
   'بیماری در لیست انتظار وجود ندارد': {
-    fa: 'Gözləmə siyahısında heç bir xəstəlik yoxdur',
+    az: 'Gözləmə siyahısında heç bir xəstəlik yoxdur',
   },
   'مدت انتظار آخرین بیمار': {
-    fa: 'Son xəstənin gözləmə müddəti',
+    az: 'Son xəstənin gözləmə müddəti',
   },
   'نسخه الکترونیکی': {
-    fa: 'Elektron dərman resepti',
+    az: 'Elektron dərman resepti',
   },
   پزشکان: {
-    fa: 'həkimlər',
+    az: 'həkimlər',
   },
   'سوابق مشاوره': {
-    fa: 'Məsləhət tarixi',
+    az: 'Məsləhət tarixi',
   },
   'پایان مشاوره': {
-    fa: 'Məsləhətləşmənin sonu',
+    az: 'Məsləhətləşmənin sonu',
   },
   شنبه: {
-    fa: 'şənbə',
+    az: 'şənbə',
   },
   یکشنبه: {
-    fa: 'bazar günü',
+    az: 'bazar günü',
   },
   دوشنبه: {
-    fa: 'bazar ertəsi',
+    az: 'bazar ertəsi',
   },
   'سه شنبه': {
-    fa: 'çərşənbə axşamı',
+    az: 'çərşənbə axşamı',
   },
   چهارشنبه: {
-    fa: 'çərşənbə',
+    az: 'çərşənbə',
   },
   'پنج شنبه': {
-    fa: 'cümə axşamı',
+    az: 'cümə axşamı',
   },
   جمعه: {
-    fa: 'cümə',
+    az: 'cümə',
   },
   january: {
-    fa: 'yanvar',
+    az: 'yanvar',
   },
   february: {
-    fa: 'fevral',
+    az: 'fevral',
   },
   march: {
-    fa: 'mart',
+    az: 'mart',
   },
   april: {
-    fa: 'aprel',
+    az: 'aprel',
   },
   may: {
-    fa: 'may',
+    az: 'may',
   },
   june: {
-    fa: 'iyun',
+    az: 'iyun',
   },
   july: {
-    fa: 'iyul',
+    az: 'iyul',
   },
   august: {
-    fa: 'avqust',
+    az: 'avqust',
   },
   september: {
-    fa: 'sentyabr',
+    az: 'sentyabr',
   },
   october: {
-    fa: 'oktyabr',
+    az: 'oktyabr',
   },
   november: {
-    fa: 'noyabr',
+    az: 'noyabr',
   },
   december: {
-    fa: 'november',
+    az: 'november',
   },
   'انتخاب زمان مشاوره آنلاین': {
-    fa: 'Onlayn məsləhətləşmə üçün vaxt seçin',
+    az: 'Onlayn məsləhətləşmə üçün vaxt seçin',
   },
   ثبت: {
-    fa: 'Qeyd',
+    az: 'Qeyd',
   },
   'کلینیک‌ها و بیمارستان‌ها': {
-    fa: 'Xəstəxanalar və klinikalar',
+    az: 'Xəstəxanalar və klinikalar',
   },
   تا: {
-    fa: 'qədər',
+    az: 'qədər',
   },
   'ساعات پاسخگوئی آنلاین': {
-    fa: 'Onlayn cavab vermə saatları',
+    az: 'Onlayn cavab vermə saatları',
   },
   گالری: {
-    fa: 'qalereya',
+    az: 'qalereya',
   },
   دوربین: {
-    fa: 'Kamera',
+    az: 'Kamera',
   },
   'دریافت تماس از': {
-    fa: 'Zəngləri qəbul edin',
+    az: 'Zəngləri qəbul edin',
   },
   'حذف ساعت روز انتخاب شده': {
-    fa: 'Seçilmiş günü və vaxtı silin',
+    az: 'Seçilmiş günü və vaxtı silin',
   },
   'برای بستن اپلیکشیشن دوباره دکمه برگشت را لمس کنید': {
-    fa: 'Proqramı bağlamaq üçün yenidən geri düyməsinə toxunun',
+    az: 'Proqramı bağlamaq üçün yenidən geri düyməsinə toxunun',
   },
   'انتخاب فایل': {
-    fa: 'Fayl seçimi',
+    az: 'Fayl seçimi',
   },
   'آیا برای پایان مکالمه و خروج از صفحه‌ی مشاوره اطمینان دارید؟': {
-    fa: 'Söhbəti bitirmək və məsləhət səhifəsindən çıxmaq istədiyinizə əminsiniz?',
+    az: 'Söhbəti bitirmək və məsləhət səhifəsindən çıxmaq istədiyinizə əminsiniz?',
   },
   'مشاوره آنلاین': {
-    fa: 'Onlayn konsultasiya',
+    az: 'Onlayn konsultasiya',
   },
   'مشاوره شما به پایان رسید': {
-    fa: 'Onlayn məsləhətləşməniz bitdi',
+    az: 'Onlayn məsləhətləşməniz bitdi',
   },
   'ورود کد فعالسازی': {
-    fa: 'Aktivləşdirmə kodunu daxil edin',
+    az: 'Aktivləşdirmə kodunu daxil edin',
   },
   'کد 6 رقمی ارسال شده به شماره همراه خود را وارد کنید.': {
-    fa: 'Nömrənizə göndərilən 6 rəqəmli kodu daxil edin.',
+    az: 'Nömrənizə göndərilən 6 rəqəmli kodu daxil edin.',
   },
   'تنظیمات پروفایل': {
-    fa: 'Profil parametrləri',
+    az: 'Profil parametrləri',
   },
   'مبلغ ویزیت:': {
-    fa: 'Həkim ziyarətinin dəyəri:',
+    az: 'Həkim ziyarətinin dəyəri:',
   },
   'افزودن ساعت بیشتر در این روز': {
-    fa: 'Bu gündə daha çox saat əlavə edin',
+    az: 'Bu gündə daha çox saat əlavə edin',
   },
   'انتخاب نشده': {
-    fa: 'Seçilməyib',
+    az: 'Seçilməyib',
   },
   خانه: {
-    fa: 'Ev',
+    az: 'Ev',
   },
   سایر: {
-    fa: 'Digər',
+    az: 'Digər',
   },
   'جستجو بر اساس کد اختصاصی یا نام پزشک': {
-    fa: 'Xüsusi kod və ya həkim adı ilə axtarın',
+    az: 'Xüsusi kod və ya həkim adı ilə axtarın',
   },
   ضعیف: {
-    fa: 'Zəif',
+    az: 'Zəif',
   },
   متوسط: {
-    fa: 'orta',
+    az: 'orta',
   },
   خوب: {
-    fa: 'Yaxşı',
+    az: 'Yaxşı',
   },
   عالی: {
-    fa: 'Əla',
+    az: 'Əla',
   },
   'کلینیک‌ و بیمارستان‌': {
-    fa: 'Klinikalar və xəstəxanalar',
+    az: 'Klinikalar və xəstəxanalar',
   },
   'ارتباط آنلاین با پزشک': {
-    fa: 'Həkimlə onlayn ünsiyyət',
+    az: 'Həkimlə onlayn ünsiyyət',
   },
   'کد اختصاصی': {
-    fa: 'Xüsusi kod',
+    az: 'Xüsusi kod',
   },
   مشاوره: {
-    fa: 'Məsləhətçilik',
+    az: 'Məsləhətçilik',
   },
   'لطفا در ساعات پاسخگویی مراجعه فرمایید': {
-    fa: 'Zəhmət olmasa cavab saatlarında müraciət edin',
+    az: 'Zəhmət olmasa cavab saatlarında müraciət edin',
   },
   'ورود کد تخفیف': {
-    fa: 'Endirim kodunu daxil edin',
+    az: 'Endirim kodunu daxil edin',
   },
   ' در انتظار پاسخگویی شما هستند': {
-    fa: ' Cavabınızı gözləyirlər',
+    az: ' Cavabınızı gözləyirlər',
   },
   بیمار: {
-    fa: 'Xəstə',
+    az: 'Xəstə',
   },
   'ارتباط تصویری مستقیم با پزشک': {
-    fa: 'Həkimlə birbaşa video əlaqə',
+    az: 'Həkimlə birbaşa video əlaqə',
   },
   'با اپلیکیشن یونیمد می‌توانید از طریــق ارتباط تصویری، صوتی و متنی به صورت مستقیم با دکتر خود در ارتباط باشید.': {
-    fa: 'MAPP tətbiqi ilə siz video, audio və mətn rabitəsi vasitəsilə həkiminizlə birbaşa əlaqə saxlaya bilərsiniz.',
+    az: 'MAPP tətbiqi ilə siz video, audio və mətn rabitəsi vasitəsilə həkiminizlə birbaşa əlaqə saxlaya bilərsiniz.',
   },
   'دریافت نوبت حضوری': {
-    fa: 'Görüş təyin edin',
+    az: 'Görüş təyin edin',
   },
   'می‌توانید از طریق نوبت حضوری در یونیمد از پزشکان منتخب در سراسر کشور نوبت بگیرید.': {
-    fa: 'Unimeddə qəbula yazılmaqla ölkənin hər yerindən seçilmiş həkimlərin qəbuluna yazıla bilərsiniz.',
+    az: 'Unimeddə qəbula yazılmaqla ölkənin hər yerindən seçilmiş həkimlərin qəbuluna yazıla bilərsiniz.',
   },
   'خدمات پزشکی و پرستاری در منزل': {
-    fa: 'Evdə tibbi və tibb bacısı xidmətləri',
+    az: 'Evdə tibbi və tibb bacısı xidmətləri',
   },
   'تمامی خدمات پزشکی و پرستاری اعم از ویزیت پزشک، تصویربرداری پزشکی، تزریقات و... را از طریق یونیمد در منزل انجام دهید.': {
-    fa: 'Unimed vasitəsilə evdə bütün tibbi və tibb bacısı xidmətlərini, o cümlədən həkim ziyarətləri, tibbi görüntüləmə, inyeksiya və s. həyata keçirin.',
+    az: 'Unimed vasitəsilə evdə bütün tibbi və tibb bacısı xidmətlərini, o cümlədən həkim ziyarətləri, tibbi görüntüləmə, inyeksiya və s. həyata keçirin.',
   },
   'پیگیری‌های بعد از درمان بیماران': {
-    fa: 'Xəstələrin müalicəsindən sonra müşahidə',
+    az: 'Xəstələrin müalicəsindən sonra müşahidə',
   },
   'با اپلیکیشن یونیمد می‌توانید از طریــق ارتباط تصویری، صوتی و متنی به صورت مستقیم با بیمار خود در ارتباط باشید.': {
-    fa: 'Unimed tətbiqi ilə siz video, audio və mətn rabitəsi vasitəsilə xəstənizlə birbaşa əlaqə saxlaya bilərsiniz.',
+    az: 'Unimed tətbiqi ilə siz video, audio və mətn rabitəsi vasitəsilə xəstənizlə birbaşa əlaqə saxlaya bilərsiniz.',
   },
   'نوبت‌دهی حضوری به بیماران': {
-    fa: 'Xəstələrlə şəxsən görüşlər',
+    az: 'Xəstələrlə şəxsən görüşlər',
   },
   'بیماران می‌توانند از طریق دریافت نوبت حضوری در یونیمد از پزشکان منتخب در سراسر کشور نوبت بگیرند.': {
-    fa: 'Xəstələr Unimed-də qəbula yazılmaqla ölkə üzrə seçilmiş həkimlərin qəbuluna yazıla bilərlər.',
+    az: 'Xəstələr Unimed-də qəbula yazılmaqla ölkə üzrə seçilmiş həkimlərin qəbuluna yazıla bilərlər.',
   },
   'خرید تجهیزات پزشکی': {
-    fa: 'Tibbi avadanlıq alın',
+    az: 'Tibbi avadanlıq alın',
   },
   '‌پزشکان از طریق فروشگاه یونیمد می‌توانند نسبت به خرید تجهیزات پزشکی مورد نیاز خود اقدام نمایند.': {
-    fa: 'Həkimlər ehtiyac duyduqları tibbi avadanlıqları Unimed mağazası vasitəsilə ala bilərlər.',
+    az: 'Həkimlər ehtiyac duyduqları tibbi avadanlıqları Unimed mağazası vasitəsilə ala bilərlər.',
   },
   دقیقه: {
-    fa: 'Dəqiqələr',
+    az: 'Dəqiqələr',
   },
   ثانیه: {
-    fa: 'Saniyələr',
+    az: 'Saniyələr',
   },
   'پیام خود را بنویسید': {
-    fa: 'Mesajınızı yazın',
+    az: 'Mesajınızı yazın',
   },
 };
 export type DictRecord = Record<string, string>;

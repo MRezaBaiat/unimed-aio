@@ -19,7 +19,7 @@ export const actionSetUser = (user: User | null) => {
   };
 };
 
-export const actionSetLang = (lang: 'fa' | 'en') => {
+export const actionSetLang = (lang: 'az' | 'en') => {
   updateDictionaryLang(lang);
   config.saveLanguage(lang);
   ChatService.setLanguage(lang);

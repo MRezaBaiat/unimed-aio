@@ -48,7 +48,7 @@ function LanguageSetModal(props: Props) {
         />
         <AppTouchable
           onClick={() => {
-            store.dispatch(actionSetLang('fa'));
+            store.dispatch(actionSetLang('az'));
             closeModal();
           }}
           style={{
