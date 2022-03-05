@@ -27,10 +27,10 @@ function DoctorProfileScreen(props) {
   };
   // const [workTime, setWorkTime] = useState([]);
   const doctorData = getScreenParam(props, 'DoctorData');
+  console.log('dddd', doctorData);
   const videoCallAllowed = doctorData.details.videoCallAllowed;
-  const [visitCheckData, setVisitCheckData] = useState();
   const type = getScreenParam(props, 'type');
-  const workTime = doctorData.details.response_days;
+  const workTime = doctorData.details.responseDays;
   const code = doctorData.code;
   const cost = doctorData.price;
 
