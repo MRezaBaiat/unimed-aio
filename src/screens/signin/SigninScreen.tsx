@@ -107,6 +107,9 @@ function SigninScreen(props) {
             keyboardType="number-pad"
             value={mobile}
             onChange={(v) => {
+              if (v.startsWith('0')) {
+                return;
+              }
               setMobile(v);
             }}
             placeHolder={'0910000000'}

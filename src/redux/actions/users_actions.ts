@@ -5,6 +5,7 @@ import Axios from 'axios';
 import ChatService from '../../services/ChatService';
 import { handleStateChange } from './actions';
 import AppNavigator from '../../navigation/AppNavigator';
+import R from '../../assets/R';
 
 export const ACTION_SET_USER = 'ACTION_SET_USER';
 export const ACTION_SET_STATUS = 'ACTION_SET_STATUS';
@@ -23,6 +24,17 @@ export const actionSetLang = (lang: 'az' | 'en') => {
   updateDictionaryLang(lang);
   config.saveLanguage(lang);
   ChatService.setLanguage(lang);
+  if (lang === 'az') {
+    R.fonts.fontFamily = 'Gilroy-Light';
+    R.fonts.fontFamily_Bold = 'Gilroy-ExtraBold';
+    R.fonts.fontFamily_faNum = 'Gilroy-Light';
+    R.fonts.fontFamily_faNum_Bold = 'Gilroy-ExtraBold';
+  } else {
+    R.fonts.fontFamily = 'Shabnam';
+    R.fonts.fontFamily_Bold = 'Shabnam-Bold';
+    R.fonts.fontFamily_faNum = 'Shabnam-FD';
+    R.fonts.fontFamily_faNum_Bold = 'Shabnam-Bold-FD';
+  }
   Axios.defaults.headers.common['Accept-Language'] = lang;
   return {
     type: ACTION_SET_LANG,

@@ -88,7 +88,7 @@ function OTPModal(props: Props) {
               }}
               textColor="#50BCBD"
               fontSize={wp(3.8)}
-              text={`تغییر شماره ${mobile}`}
+              text={`${dictionary['تغییر شماره']} ${mobile}`}
             />
           </AppTouchable>
         )}
