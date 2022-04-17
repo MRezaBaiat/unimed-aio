@@ -23,7 +23,7 @@ export function WhatsAppPayModal(props: Props) {
     <AppModal onRequestClose={onRequestClose} animationType="slide" transparent={false} visible={true}>
       <ModalHeader text={dictionary.pay_for_visit} closeColor="darkBlue" onClosePress={onRequestClose} />
       <AppView style={{ flex: 1, backgroundColor: 'white', alignItems: 'center', justifyContent: 'center', margin: 20 }}>
-        <AppTextView fontSize={30} textAlign={'center'} text={dictionary.whatsapp_pay} />
+        <AppTextView fontSize={wp(5)} textAlign={'center'} text={dictionary.whatsapp_pay} />
       </AppView>
     </AppModal>
   );
