@@ -19,6 +19,7 @@ import BottomTab from '../../../components/composite/bottom_tab/BottomTab';
 import { callIntent, getFavoriteDoctors, openURL } from '../../../helpers';
 import AppSearchInput from '../../../components/composite/app_search_input/AppSearchInput';
 import dictionary from '../../../assets/strings/dictionary';
+import useLang from '../../../hooks/useLang';
 
 const ImageSlides = [
   {
@@ -38,6 +39,8 @@ const StandardModeScreen = ({ initialCode }: { initialCode?: string }) => {
   const [backMillisec, setBackMillisec] = useState(0);
   const [exitAlert, setExitAlert] = useState(false);
   const [search, setSearch] = useState(initialCode ? String(initialCode) : '');
+  const lang = useLang();
+  console.log('LLLL', lang, dictionary.code);
 
   const _keyboardDidShow = () => {
     setSearchFocued(true);
@@ -287,7 +290,7 @@ const StandardModeScreen = ({ initialCode }: { initialCode?: string }) => {
                         fontSize: wp(3.3),
                         color: '#4f4f4f',
                       }}
-                      text={` ${dictionary.code}: ${doctor.code}`}
+                      text={` ${dictionary.code[lang]}: ${doctor.code}`}
                     />
                   </AppTouchable>
                 );

@@ -218,7 +218,7 @@ function SettingScreen() {
             />
           </AppTouchable>
         )}
-        {/* <AppTouchable
+        <AppTouchable
           onClick={() => {
             setLanguageModalVisible(true);
           }}
@@ -229,14 +229,20 @@ function SettingScreen() {
             borderBottomWidth: 2,
             flexDirection: 'row-reverse',
             alignItems: 'center',
-            paddingStart: '11.5%'
-          }}>
-          <AppImageView
-            resizeMode="contain"
-            style={{ width: wp(8.5), aspectRatio: 1 }}
-            src={R.images.icons.languageSettingIcon}
+            paddingStart: '11.5%',
+          }}
+        >
+          <AppImageView resizeMode="contain" style={{ width: wp(8.5), aspectRatio: 1 }} src={R.images.icons.languageSettingIcon} />
+          <AppTextView
+            style={{
+              fontFamily: R.fonts.fontFamily_faNum,
+              fontSize: wp(3.8),
+              color: '#38488A',
+              marginRight: '14.25%',
+            }}
+            text={dictionary.language}
           />
-        </AppTouchable> */}
+        </AppTouchable>
         <AppTouchable
           onClick={() => {
             _phoneCall();

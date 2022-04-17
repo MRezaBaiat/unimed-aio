@@ -15,6 +15,9 @@ import AppTextInput from '../../components/base/app-text-input/AppTextInput';
 import TermsAndConditionsModal from '../../modals/t&c-modal/TermsAndConditionsModal';
 import OTPModal from '../../modals/otp-modal/OTPModal';
 import ToastMaster from '../../helpers/ToastMaster';
+import config from '../../config/config';
+import LanguageSetModal from '../../modals/LanguageSetModal';
+import useLang from '../../hooks/useLang';
 
 function SigninScreen(props) {
   const [mobile, setMobile] = useState('');
@@ -22,6 +25,8 @@ function SigninScreen(props) {
   const [countryCode, setCountryCode] = useState<CountryCode>('IR');
   const [modalVisible, setModalVisible] = useState(false);
   const [tcModalVisible, setTCModalVisible] = useState(false);
+  const language = useLang();
+  const [langModal, setLangModal] = useState(Boolean(!config.isLanguageSet()));
 
   const login = () => {
     if (mobile.length > 11 || mobile.length < 5) {
@@ -112,7 +117,7 @@ function SigninScreen(props) {
               }
               setMobile(v);
             }}
-            placeHolder={'0910000000'}
+            placeHolder={'910000000'}
             textStyle={{
               fontSize: wp(3.8),
               textAlign: 'left',
@@ -159,18 +164,20 @@ function SigninScreen(props) {
             margin: hp(2),
           }}
         >
-          {dictionary.by_registering}
+          {dictionary.by_registering[language]}
           <Text
             style={{ fontFamily: R.fonts.fontFamily_Bold, color: '#50BCBD' }}
             onPress={() => {
               setTCModalVisible(true);
             }}
           >
-            {dictionary.signin_conditions}
+            {dictionary.signin_conditions[language]}
           </Text>
-          <Text>{dictionary.that_accept}</Text>
+          <Text>{dictionary.that_accept[language]}</Text>
         </Text>
       </AppView>
+
+      <LanguageSetModal title={dictionary.select_language} modalVisible={langModal} closeModal={() => setLangModal(false)} />
 
       {modalVisible && (
         <OTPModal

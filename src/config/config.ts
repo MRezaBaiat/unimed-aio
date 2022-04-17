@@ -18,7 +18,11 @@ const saveLanguage = (lang: 'az' | 'en') => {
 };
 
 const readLanguage = (): 'az' | 'en' => {
-  return Storage.get('language') || 'az';
+  return Storage.get('language');
+};
+
+const isLanguageSet = () => {
+  return Boolean(Storage.get('language'));
 };
 
 export default {
@@ -26,4 +30,5 @@ export default {
   getNewPatientVoiceMode,
   saveLanguage,
   readLanguage,
+  isLanguageSet,
 };

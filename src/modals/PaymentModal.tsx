@@ -18,6 +18,7 @@ import { numberWithCommas, openURL } from '../helpers';
 import { User, UserType } from 'api';
 import AppPermissions from '../helpers/AppPermissions';
 import AppModal from '../components/base/app-modal/AppModal';
+import { WhatsAppPayModal } from './whatsapp.pay.modal';
 
 interface Props {
   onRequestClose: () => void;
@@ -34,6 +35,7 @@ function PaymentModal(props: Props) {
   const [discountAmount, setDiscountAmount] = useState(0);
   const [modalHeight, setModalHeight] = useState(55);
   const [url, setUrl] = useState(undefined);
+  const [whatsappVisible, setWhatsappVisible] = useState(false);
   const [currency, setCurrency] = useState();
   const payable = !discountAmount ? cost : cost - discountAmount < 0 ? 0 : cost - discountAmount;
   const lang = useSelector((state) => state.userReducer.lang);
@@ -149,12 +151,12 @@ function PaymentModal(props: Props) {
           }}
         />
         <AppView style={{ height: hp(6.5), width: wp(76), marginTop: hp(4.5), borderRadius: hp(1.2), backgroundColor: '#F2F2F2', alignItems: 'center', justifyContent: 'space-between', flexDirection: 'row-reverse', paddingHorizontal: '4%' }}>
-          <AppTextView style={{ fontSize: wp(3.8) }} textAlign="right" textColor="#38488A" text={`${dictionary.your_credit}:`} />
-          <AppTextView style={{ fontSize: wp(3.8), fontFamily: R.fonts.fontFamily_faNum }} textAlign="right" textColor="#38488A" text={`${numberWithCommas(String(currency))} ${dictionary.currency_unit} `} />
+          <AppTextView style={{ fontSize: wp(3.8) }} textAlign="right" textColor="#38488A" text={`${dictionary.your_credit[lang]}`} />
+          <AppTextView style={{ fontSize: wp(3.8), fontFamily: R.fonts.fontFamily_faNum }} textAlign="right" textColor="#38488A" text={`${numberWithCommas(String(currency))} ${dictionary.currency_unit[lang]} `} />
         </AppView>
         <AppView style={{ height: hp(6.5), width: wp(76), marginTop: hp(2.2), borderRadius: hp(1.2), backgroundColor: '#F2F2F2', alignItems: 'center', justifyContent: 'space-between', flexDirection: 'row-reverse', paddingHorizontal: '4%' }}>
-          <AppTextView style={{ fontSize: wp(3.8) }} textAlign="right" textColor="#38488A" text={`${dictionary.visit_price}:`} />
-          <AppTextView style={{ fontSize: wp(3.8), fontFamily: R.fonts.fontFamily_faNum }} textAlign="right" textColor="#38488A" text={`${numberWithCommas(String(payable))} ${dictionary.currency_unit} `} />
+          <AppTextView style={{ fontSize: wp(3.8) }} textAlign="right" textColor="#38488A" text={`${dictionary.visit_price[lang]}`} />
+          <AppTextView style={{ fontSize: wp(3.8), fontFamily: R.fonts.fontFamily_faNum }} textAlign="right" textColor="#38488A" text={`${numberWithCommas(String(payable))} ${dictionary.currency_unit[lang]} `} />
         </AppView>
         <AppTextInput
           style={{ height: hp(6.5), width: wp(76), marginTop: hp(2.2), borderRadius: hp(1.2), borderWidth: 1, borderColor: '#38488A', paddingHorizontal: wp(2) }}
@@ -181,7 +183,8 @@ function PaymentModal(props: Props) {
                 }
               });
             } else {
-              url && openURL(url, '_self');
+              setWhatsappVisible(true);
+              // url && openURL(url, '_self');
             }
           }}
           style={{ height: hp(6.5), width: wp(76), marginTop: hp(2.2), borderRadius: hp(1.2), backgroundColor: '#38488A', alignItems: 'center', justifyContent: 'center' }}
@@ -189,6 +192,7 @@ function PaymentModal(props: Props) {
           <AppTextView text={currency >= payable ? dictionary.next : dictionary.pay} fontSize={wp(3.8)} style={{ color: '#FFFFFF', fontFamily: R.fonts.fontFamily_Bold }} />
         </AppTouchable>
       </AppView>
+      {whatsappVisible && <WhatsAppPayModal onRequestClose={() => setWhatsappVisible(false)} />}
     </AppModal>
   );
 }

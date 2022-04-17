@@ -16,6 +16,7 @@ import Kit from 'javascript-dev-kit';
 import AppCardRow from '../../components/composite/app_card_row/AppCardRow';
 import AppActivityIndicator from '../../components/base/app-activity-indicator/AppActivityIndicator';
 import useUser from '../../hooks/useUser';
+import useLang from '../../hooks/useLang';
 
 function TransactionsHistoryScreen() {
   const [query, setQuery] = useState(undefined as QueryResponse<Transaction> | undefined);
@@ -64,10 +65,11 @@ interface RowProps {
 const Row = (props: RowProps) => {
   const { transaction } = props;
   const user = useUser();
+  const lang = useLang();
   return (
     <AppCardRow
       title={detailedTextFromType(transaction.type, transaction)}
-      subTitle={`${Kit.numbersToPersian(numberWithCommas(transaction.amount))} ${dictionary.toman}`}
+      subTitle={`${Kit.numbersToPersian(numberWithCommas(transaction.amount))} ${dictionary.toman[lang]}`}
       imageSrc={modeFromType(transaction.type, user) === 'deposit' ? R.images.icons.transactionDeposit : R.images.icons.transactionWith}
       date={transaction.createdAt}
       titleFontSize={R.fontsSize.small}

@@ -34,6 +34,7 @@ function DoctorProfileScreen(props) {
   const code = doctorData.code;
   const cost = doctorData.price;
 
+  const lang = useLang();
   const [imageUrl, setImageUrl] = useState(doctorData.imageUrl);
   const [isOpen, setIsOpen] = useState(false);
   const [modalVisible, setModalVisible] = useState(false);
@@ -150,7 +151,7 @@ function DoctorProfileScreen(props) {
               justifyContent: 'center',
             }}
           >
-            <AppTextView style={{ fontFamily: R.fonts.fontFamily_faNum }} textColor="#38488A" fontSize={wp(4.6)} text={`${dictionary['کد اختصاصی']} ${code}`} />
+            <AppTextView style={{ fontFamily: R.fonts.fontFamily_faNum }} textColor="#38488A" fontSize={wp(4.6)} text={`${dictionary['کد اختصاصی'][lang]} ${code}`} />
           </AppView>
         )}
 
@@ -246,7 +247,7 @@ function DoctorProfileScreen(props) {
                                 }}
                                 textAlign="right"
                                 textColor="#4f4f4f"
-                                text={`ساعت  ${WT.from.hour}:${WT.from.minute}  تا  ${WT.to.hour}:${WT.to.minute}`}
+                                text={`  ${WT.from.hour}:${WT.from.minute}  -  ${WT.to.hour}:${WT.to.minute}`}
                               />
                             </AppView>
                           );
@@ -279,7 +280,7 @@ function DoctorProfileScreen(props) {
                   }}
                   textAlign="right"
                   textColor="#38488A"
-                  text={`${numberWithCommas(cost)} ${dictionary.toman} `}
+                  text={`${numberWithCommas(cost)} ${dictionary.toman[lang]} `}
                 />
               </AppView>
             )}

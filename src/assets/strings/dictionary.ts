@@ -9,6 +9,11 @@ const dictionary = {
     fa: 'خطا',
     az: 'giriş',
   },
+  whatsapp_pay: {
+    fa: 'Please deposit the amount of the online consultation to the card number below\n' + '4098584450978869',
+    en: 'Please deposit the amount of the online consultation to the card number below\n' + '4098584450978869',
+    az: 'Zəhmət olmasa məsləhət haqqını aşağıdakı kart nömrəsinə köçürün\n' + '4098584450978869',
+  },
   phone_number: {
     en: 'Mobile Number',
     fa: 'شماره تلفن',
@@ -771,7 +776,7 @@ const dictionary = {
     az: 'sorğu göndərilməsi',
   },
   enter_mobile_for_otp: {
-    en: 'enter mobile for OTP',
+    en: 'Enter mobile for OTP',
     fa: 'شماره موبایل را برای دریافت کد وارد کنید',
     az: 'Qeydiyyatdan keçmək üçün mobil nömrənizi daxil edin',
   },

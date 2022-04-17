@@ -26,9 +26,8 @@ function LanguageSetModal(props: Props) {
       <AppView
         style={[
           {
-            height: hp(50),
-            backgroundColor: '#FFFFFF',
-            marginTop: hp(50),
+            height: hp(100),
+            backgroundColor: '#ffffff',
             borderTopLeftRadius: hp(3),
             borderTopRightRadius: hp(3),
             alignItems: 'center',
@@ -61,7 +60,7 @@ function LanguageSetModal(props: Props) {
             alignItems: 'center',
           }}
         >
-          <AppTextView style={{ fontSize: wp(3.8), color: '#38488A' }} text={dictionary.persian} />
+          <AppTextView style={{ fontSize: wp(3.8), color: '#38488A' }} text={dictionary.Azerbaijani} />
         </AppTouchable>
         <AppTouchable
           onClick={() => {

@@ -169,8 +169,7 @@ export default function App() {
       await FileSystem.getFileSystem(true).initialize();
       await FileSystem.getFileSystem(false).initialize();
       await Analytics.initialize();
-      const lang = config.readLanguage();
-      store.dispatch(actionSetLang(lang));
+      store.dispatch(actionSetLang(config.readLanguage()));
       await Font.loadAsync({
         Shabnam: {
           uri: require('./src/assets/fonts/Shabnam.ttf'),

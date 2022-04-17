@@ -5,6 +5,7 @@ import { HTMLTypes, ValidatorField } from 'api';
 import AppView from '../app-view/AppView';
 import { safeAssignStyles } from '../../../helpers';
 import { DictRecord } from '../../../assets/strings/dictionary';
+import useLang from '../../../hooks/useLang';
 
 export interface Props {
   onChange?: (text: string) => void;
@@ -29,6 +30,7 @@ export interface Props {
   onFocus?: (focused: boolean) => void;
 }
 function AppTextInput(props: Props) {
+  const lang = useLang();
   const [contentSize, setContentSize] = useState(0);
   const { style, disabled, iconLeft, keyboardType, maxLength, multiline, onChange, placeHolder, textColor, textStyle, labelStyle, fontFamily, placeholderTextColor, value, autoGrow, onFocus } = props;
 
@@ -61,7 +63,7 @@ function AppTextInput(props: Props) {
         disabled={disabled}
         multiline={multiline}
         inlineLabel={true}
-        placeholder={placeHolder}
+        placeholder={typeof placeHolder === 'object' ? placeHolder[lang] : placeHolder}
         onChangeText={onChange}
         onContentSizeChange={(e) => {
           autoGrow && setContentSize(e.nativeEvent.contentSize.height);

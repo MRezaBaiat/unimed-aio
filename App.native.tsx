@@ -13,9 +13,7 @@ import { Provider, useSelector } from 'react-redux';
 import FileSystem from './src/cache/file-system/FileSystem';
 import AppCenter from 'appcenter';
 import SyncScreen from './src/screens/sync_screen/SyncScreen';
-import {
-  registerGlobals
-} from 'react-native-webrtc';
+import { registerGlobals } from 'react-native-webrtc';
 import Analytics from './src/analytics/analytics';
 import 'react-native-url-polyfill/auto';
 import queueMicrotask from 'queue-microtask';
@@ -41,7 +39,7 @@ Audio.setAudioModeAsync({
   allowsRecordingIOS: true,
   playsInSilentModeIOS: true,
   interruptionModeAndroid: Audio.INTERRUPTION_MODE_ANDROID_DUCK_OTHERS,
-  interruptionModeIOS: Audio.INTERRUPTION_MODE_IOS_DUCK_OTHERS
+  interruptionModeIOS: Audio.INTERRUPTION_MODE_IOS_DUCK_OTHERS,
 });
 
 global.playLocalSound = async (soundName: 'voice_visit_time_ended' | 'dial_tone') => {
@@ -51,7 +49,7 @@ global.playLocalSound = async (soundName: 'voice_visit_time_ended' | 'dial_tone'
   sound.setOnPlaybackStatusUpdate((status) => {
     if (status.isLoaded && status.positionMillis === status.durationMillis) {
       sound.unloadAsync();
-      endListeners.forEach(l => l());
+      endListeners.forEach((l) => l());
     }
   });
   return {
@@ -60,11 +58,11 @@ global.playLocalSound = async (soundName: 'voice_visit_time_ended' | 'dial_tone'
     },
     stop: () => {
       sound.unloadAsync();
-    }
+    },
   };
 };
 
-export default function App () {
+export default function App() {
   const [ready, setReady] = useState(false);
 
   useLayoutEffect(() => {
@@ -75,7 +73,7 @@ export default function App () {
         getErrorAttachments: async (report) => {
           const textAttachment = ErrorAttachmentLog.attachmentWithText('user', JSON.stringify(store.getState().userReducer.user || {}));
           return [textAttachment];
-        }
+        },
       });
       await Storage.initialize();
       await NetUtils.init();
@@ -85,20 +83,19 @@ export default function App () {
       await FileSystem.getFileSystem(false).initialize();
       await FileSystem.getFileSystem(true).purge();
       await Analytics.initialize();
-      const lang = config.readLanguage();
-      store.dispatch(actionSetLang(lang));
+      store.dispatch(actionSetLang(config.readLanguage()));
       setReady(true);
     };
     init();
   }, []);
 
-  return ready ? <Render/> : null;
+  return ready ? <Render /> : null;
 }
 
 const Render = () => (
-    <React.StrictMode>
-      <Provider store={store}>
-        <SyncScreen/>
-      </Provider>
-    </React.StrictMode>
+  <React.StrictMode>
+    <Provider store={store}>
+      <SyncScreen />
+    </Provider>
+  </React.StrictMode>
 );

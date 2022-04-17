@@ -14,6 +14,7 @@ import AppTouchable from '../../components/base/app-touchable/AppTouchable';
 import OTPInputView from '@twotalltotems/react-native-otp-input';
 import { useIsFocused } from '@react-navigation/native';
 import AppModal from '../../components/base/app-modal/AppModal';
+import useLang from '../../hooks/useLang';
 
 interface Props {
   onResend: () => void;
@@ -27,6 +28,8 @@ function OTPModal(props: Props) {
   const [code, setCode] = useState('');
   const [codeError, setCodeError] = useState(false);
   const [seconds, setSeconds] = useState(60);
+  const lang = useLang();
+
   useEffect(() => {
     if (seconds > 0) {
       setTimeout(() => {
@@ -56,7 +59,7 @@ function OTPModal(props: Props) {
     inputRef.current &&
       setTimeout(() => {
         inputRef.current.focusField(0);
-      }, 200);
+      }, 1000);
   }, [inputRef.current]);
 
   return (
@@ -98,7 +101,7 @@ function OTPModal(props: Props) {
               }}
               textColor="#50BCBD"
               fontSize={wp(3.8)}
-              text={`${dictionary.change_number} ${mobile}`}
+              text={`${dictionary.change_number[lang]} ${mobile}`}
             />
           </AppTouchable>
         )}
