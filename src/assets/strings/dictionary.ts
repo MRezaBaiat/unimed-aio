@@ -10,9 +10,9 @@ const dictionary = {
     az: 'giriş',
   },
   whatsapp_pay: {
-    fa: 'Please deposit the amount of the online consultation to the card number below\n' + '4098584450978869',
-    en: 'Please deposit the amount of the online consultation to the card number below\n' + '4098584450978869',
-    az: 'Zəhmət olmasa məsləhət haqqını aşağıdakı kart nömrəsinə köçürün\n' + '4098584450978869',
+    fa: 'Please deposit the amount of the online consultation to the card number below\n' + '4098584450978869 \n NATIG NAGHIYEY \n and then send the receipt to \n 0994555809998',
+    en: 'Please deposit the amount of the online consultation to the card number below\n' + '4098584450978869 \n NATIG NAGHIYEY \n and then send the receipt to \n 0994555809998',
+    az: 'Zəhmət olmasa məsləhət haqqını aşağıdakı kart nömrəsinə köçürün\n' + '4098584450978869 \n və sonra qəbzi \n 0994555809998 nömrəsinə göndərin.',
   },
   phone_number: {
     en: 'Mobile Number',
