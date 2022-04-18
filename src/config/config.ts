@@ -14,7 +14,7 @@ const getNewPatientVoiceMode = (): 'notification' | 'voice' => {
 };
 
 const saveLanguage = (lang: 'az' | 'en') => {
-  Storage.set('language', lang);
+  lang && Storage.set('language', lang);
 };
 
 const readLanguage = (): 'az' | 'en' => {
