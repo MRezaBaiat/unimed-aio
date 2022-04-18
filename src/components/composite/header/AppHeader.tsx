@@ -19,7 +19,7 @@ interface Props {
 const AppHeader = (props: Props) => {
   const { text, onBackPress, BackIcon, backIconVisible, mode } = props;
   return (
-    <AppView style={{ width: wp(86), zIndex: Number.MAX_SAFE_INTEGER, position: 'absolute', height: hp(4), top: mode === 'screen' ? hp(4.1) : hp(4.1) + (Platform.OS === 'web' ? 0 : StatusBar.currentHeight || 0), alignSelf: 'center', flexDirection: 'row-reverse', alignItems: 'center', justifyContent: 'space-between' }}>
+    <AppView style={{ width: wp(86), zIndex: Number.MAX_SAFE_INTEGER, position: 'absolute', height: hp(10), alignSelf: 'center', flexDirection: 'row-reverse', alignItems: 'center', justifyContent: 'space-between' }}>
       <AppTextView style={{ fontFamily: R.fonts.fontFamily_Bold, fontSize: wp(4.6), color: '#FFFFFF', textAlignVertical: 'top' }} text={text || ''} />
       {backIconVisible && (
         <AppTouchable style={{ padding: 10, justifyContent: 'center' }} onClick={onBackPress}>

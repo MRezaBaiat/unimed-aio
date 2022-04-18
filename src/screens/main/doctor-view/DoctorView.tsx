@@ -22,6 +22,7 @@ import AppActivityIndicator from '../../../components/base/app-activity-indicato
 import useStatus from '../../../hooks/useStatus';
 import { smartDate } from 'javascript-dev-kit';
 import dictionary from '../../../assets/strings/dictionary';
+import useLang from '../../../hooks/useLang';
 
 const ImageSlides = [
   {
@@ -53,7 +54,7 @@ const _linkToURL = async (url) => {
 };
 const DoctorView = () => {
   const status = useStatus() as DoctorStatus;
-
+  const lang = useLang();
   const queueList = status.queueList;
 
   const _phoneCall = () => {
@@ -87,7 +88,7 @@ const DoctorView = () => {
   const getLastPatientInQueueTime = () => {
     const initiateDate = queueList[queueList.length - 1].createdAt;
     const SecondsToNow = (smartDate().getTime() - smartDate(initiateDate).getTime()) / 1000;
-    return SecondsToNow < 60 ? `${Math.round(SecondsToNow)} ${dictionary['ثانیه']} ` : `${Math.round(SecondsToNow / 60)} ${dictionary['دقیقه']} `;
+    return SecondsToNow < 60 ? `${Math.round(SecondsToNow)} ${dictionary['ثانیه'][lang]} ` : `${Math.round(SecondsToNow / 60)} ${dictionary['دقیقه'][lang]} `;
   };
 
   return (
@@ -184,19 +185,11 @@ const DoctorView = () => {
                 <AppView style={{ flexDirection: 'row-reverse' }}>
                   <AppTextView
                     style={{
-                      fontFamily: R.fonts.fontFamily_faNum_Bold,
-                      fontSize: wp(3.3),
-                      color: '#38488a',
-                    }}
-                    text={`${queueList.length} ${dictionary['بیمار']}`}
-                  />
-                  <AppTextView
-                    style={{
                       fontFamily: R.fonts.fontFamily_faNum,
                       fontSize: wp(3.3),
                       color: '#38488a',
                     }}
-                    text={dictionary[' در انتظار پاسخگویی شما هستند']}
+                    text={`${queueList.length} ${dictionary['بیمار'][lang]} ${dictionary[' در انتظار پاسخگویی شما هستند'][lang]}`}
                   />
                 </AppView>
               )}
@@ -207,7 +200,7 @@ const DoctorView = () => {
                   color: '#9E9E9E',
                   marginTop: hp(1),
                 }}
-                text={queueList.length === 0 ? dictionary['بیماری در لیست انتظار وجود ندارد'] : `${dictionary['مدت انتظار آخرین بیمار']}: ${getLastPatientInQueueTime()}`}
+                text={queueList.length === 0 ? dictionary['بیماری در لیست انتظار وجود ندارد'] : `${dictionary['مدت انتظار آخرین بیمار'][lang]}: ${getLastPatientInQueueTime()}`}
               />
             </AppView>
           </AppTouchable>

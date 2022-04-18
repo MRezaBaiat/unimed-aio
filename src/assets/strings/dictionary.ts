@@ -1271,7 +1271,7 @@ const dictionary = {
     az: 'Endirim kodunu daxil edin',
   },
   ' در انتظار پاسخگویی شما هستند': {
-    en: 'They are waiting for your answer',
+    en: 'are waiting for your answer',
     fa: 'در انتظار پاسخگویی شما هستند',
     az: ' Cavabınızı gözləyirlər',
   },

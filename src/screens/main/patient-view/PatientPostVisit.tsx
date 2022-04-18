@@ -14,13 +14,15 @@ import AppView from '../../../components/base/app-view/AppView';
 import StepIndicator from 'react-native-step-indicator';
 import AppTouchable from '../../../components/base/app-touchable/AppTouchable';
 import AppNavigator from '../../../navigation/AppNavigator';
+import useLang from '../../../hooks/useLang';
 
 interface Props {
   visit: Visit;
 }
 
 function PatientPostVisit(props: Props) {
-  const labels = [dictionary['ضعیف'], dictionary['متوسط'], dictionary['خوب'], dictionary['عالی']];
+  const lang = useLang();
+  const labels = [dictionary['ضعیف'][lang], dictionary['متوسط'][lang], dictionary['خوب'][lang], dictionary['عالی'][lang]];
   const customStyles = {
     stepIndicatorSize: hp(2.5),
     currentStepIndicatorSize: hp(2.5),

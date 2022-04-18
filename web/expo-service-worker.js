@@ -4,11 +4,11 @@
  * Store notification icon string in service worker.
  * Ref: https://stackoverflow.com/a/35729334/2603230
  */
-const SW_VERSION = '1.0.18';
+const SW_VERSION = '1.0.19';
 const TAG = '[service-worker]';
 console.log(TAG, 'service worker started with version ' + SW_VERSION);
 
-self.addEventListener('message', event => {
+self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'GET_VERSION') {
     event.ports[0].postMessage(SW_VERSION);
   }

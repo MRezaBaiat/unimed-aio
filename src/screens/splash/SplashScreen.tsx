@@ -6,6 +6,10 @@ import AppNavigator from '../../navigation/AppNavigator';
 import SplashAnim from './splash-anim';
 import { preloadAll } from '../../navigation/Routes';
 import ChatService from '../../services/ChatService';
+import AppImageView from '../../components/base/app-image/app-imageview';
+import { hp } from '../../helpers/responsive-screen';
+import AppView from '../../components/base/app-view/AppView';
+import images from '../../assets/images/images';
 
 function SplashScreen() {
   const [loaded, setLoaded] = useState(true);
@@ -21,23 +25,25 @@ function SplashScreen() {
     preloadAll().then(() => {
       setLoaded(true);
     });
+
+    setTimeout(() => {
+      ChatService.allowConnect();
+      setAnimationEnded(true);
+    }, 3000);
   }, []);
 
   return (
     <AppContainer connectionStatus={animationEnded} style={{ alignItems: 'center', justifyContent: 'center', flex: 1, marginTop: 0 }}>
       <StatusBar hidden />
-      <SplashAnim
+      <AppView style={{ alignItems: 'center', justifyContent: 'center', flex: 1 }}>
+        <AppImageView src={images.arm} style={{ width: hp(30), height: hp(50) }} />
+      </AppView>
+      {/*<SplashAnim
         onEnd={() => {
           ChatService.allowConnect();
           setAnimationEnded(true);
-          /* if (Platform.OS === 'web') {
-              ChatService.allowConnect();
-              setAnimationEnded(true);
-            } else {
-              AppNavigator.navigateTo('TestScreen');
-            } */
         }}
-      />
+      />*/}
     </AppContainer>
   );
 }
