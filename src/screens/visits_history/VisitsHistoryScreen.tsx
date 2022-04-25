@@ -76,9 +76,6 @@ const Row = (props: RowProps) => {
   const isPatient = user.type === UserType.PATIENT;
   const imageUrl = isPatient ? visit.doctor && visit.doctor.imageUrl : visit.patient && visit.patient.imageUrl;
   const clickable = visit.state === VisitStatus.ENDED;
-  if (!visit.patient) {
-    console.log('aaaaa', visit);
-  }
   const onClick = () => {
     console.log(visit);
     clickable &&
@@ -94,7 +91,7 @@ const Row = (props: RowProps) => {
     <AppCardRow
       onClick={clickable ? onClick : undefined}
       imageSrc={imageUrl}
-      title={isPatient ? (visit.doctor ? visit.doctor.name : dictionary.deleted_doctor) : visit.patient ? (visit.patient.name && visit.patient.name !== 'Unknown' ? visit.patient.name : visit.patient.mobile.slice(0, 4) + '***' + visit.patient.mobile.slice(7, 14)) : 'بیمار حذف شده'}
+      title={isPatient ? (visit.doctor ? visit.doctor.name : dictionary.deleted_doctor) : visit.patient ? (visit.patient.name && visit.patient.name !== 'Unknown' ? visit.patient.name : visit.patient.mobile.slice(0, 4) + '***' + visit.patient.mobile.slice(7, 14)) : 'Deleted patient'}
       /* subTitle={visit.doctor ? visit.doctor.specialization.name : ''} */
       date={visit.createdAt}
     />

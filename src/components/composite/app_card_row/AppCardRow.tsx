@@ -9,6 +9,7 @@ import AppCardView from '../../base/app-card-view/AppCardView';
 import { StyleProp, ViewStyle } from 'react-native';
 import { formatDateShamsi, safeAssignStyles } from '../../../helpers';
 import dictionary, { DictRecord } from '../../../assets/strings/dictionary';
+import useLang from '../../../hooks/useLang';
 
 interface Props {
   onClick?: () => void;
@@ -27,6 +28,7 @@ interface Props {
 }
 function AppCardRow(props: Props) {
   const { style, onClick, title, date, imageSrc, subTitle, online, titleFontSize, subtitleFontSize, dateExtra, dateExtraStyle, avatarStyle, resizeMode } = props;
+  const lang = useLang();
   return (
     <AppCardView touchable onClick={onClick} style={safeAssignStyles({ width: wp(92), borderRadius: hp(1.2), marginTop: hp(1.2), alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }, style)}>
       <AppView style={{ width: '100%', height: hp(15.5), flexDirection: 'row', alignItems: 'center', justifyContent: 'flex-end' }}>
@@ -55,8 +57,8 @@ function AppCardRow(props: Props) {
           }}
         >
           {dateExtra && <AppTextView style={safeAssignStyles({ fontFamily: R.fonts.fontFamily_faNum }, dateExtraStyle)} text={dateExtra} fontSize={R.fontsSize.small} textColor={'#4F4F4F'} />}
-          <AppTextView style={{ fontFamily: R.fonts.fontFamily_faNum }} text={`${dictionary.date}: ${formatDateShamsi(date).split('-')[1]}`} fontSize={R.fontsSize.small} textColor={'#4F4F4F'} />
-          <AppTextView style={{ fontFamily: R.fonts.fontFamily_faNum }} text={`${dictionary.hour}: ${formatDateShamsi(date).split('-')[0]}`} fontSize={R.fontsSize.small} textColor={'#4F4F4F'} />
+          <AppTextView style={{ fontFamily: R.fonts.fontFamily_faNum }} text={`${dictionary.date[lang]}: ${formatDateShamsi(date).split('-')[1]}`} fontSize={R.fontsSize.small} textColor={'#4F4F4F'} />
+          <AppTextView style={{ fontFamily: R.fonts.fontFamily_faNum }} text={`${dictionary.hour[lang]}: ${formatDateShamsi(date).split('-')[0]}`} fontSize={R.fontsSize.small} textColor={'#4F4F4F'} />
         </AppView>
       )}
     </AppCardView>

@@ -1001,7 +1001,7 @@ const dictionary = {
     az: 'həkimlər',
   },
   'سوابق مشاوره': {
-    en: 'consulting records',
+    en: 'Consulting records',
     fa: 'سوابق مشاوره',
     az: 'Məsləhət tarixi',
   },
@@ -1211,7 +1211,7 @@ const dictionary = {
     az: 'Əsas',
   },
   سایر: {
-    en: 'other',
+    en: 'Other',
     fa: 'سایر',
     az: 'Digər',
   },
