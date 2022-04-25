@@ -91,7 +91,7 @@ const StandardModeScreen = ({ initialCode }: { initialCode?: string }) => {
   useEffect(load, [search]); */
 
   const _phoneCall = () => {
-    callIntent('+989900303910');
+    callIntent('+994555809998');
   };
 
   const _linkToURL = async (url) => {

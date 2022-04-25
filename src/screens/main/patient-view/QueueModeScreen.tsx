@@ -52,7 +52,7 @@ const QueueModeScreen = () => {
         <AppView style={{ height: hp(6), width: wp(80), alignSelf: 'center', flexDirection: 'row-reverse', alignItems: 'center', justifyContent: 'space-around' }}>
           <AppTextView textColor="#38488A" fontSize={wp(3.3)} text={dictionary.quantity_in_queue} />
           <AppView style={{ height: 0.4, backgroundColor: 'rgba(80,188,189,0.5)', flex: 1, marginHorizontal: 10, marginTop: hp(1) }} />
-          <AppTextView textColor="#38488A" style={{ fontFamily: R.fonts.fontFamily_faNum_Bold }} text={`${queue - 1} ${dictionary.N} `} />
+          <AppTextView textColor="#38488A" style={{ fontFamily: R.fonts.fontFamily_faNum_Bold }} text={`${queue - 1} ${dictionary.N[lang]} `} />
         </AppView>
       )}
       <QueueAnim />
