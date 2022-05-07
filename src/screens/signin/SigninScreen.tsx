@@ -117,7 +117,7 @@ function SigninScreen(props) {
               }
               setMobile(v);
             }}
-            placeHolder={'910000000'}
+            placeHolder={'500000000'}
             textStyle={{
               fontSize: wp(3.8),
               textAlign: 'left',
