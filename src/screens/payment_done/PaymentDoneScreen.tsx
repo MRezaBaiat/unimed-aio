@@ -10,6 +10,9 @@ import * as Font from 'expo-font';
 import AppView from '../../components/base/app-view/AppView';
 
 function PaymentDoneScreen(props) {
+  if (true) {
+    return;
+  }
   console.log(props);
   // const urlParams = new URLSearchParams(props.location.search);
   const call = getScreenParam(props, 'call'); // urlParams.get('call');

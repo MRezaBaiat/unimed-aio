@@ -154,7 +154,7 @@ function OTPModal(props: Props) {
         </AppTouchable>
         {seconds !== 0 && (
           <AppTextView
-            text={`${String(seconds)}  ${dictionary.seconds_until_resubmission}`}
+            text={`${String(seconds)}  ${dictionary.seconds_until_resubmission[lang]}`}
             style={{
               fontFamily: R.fonts.fontFamily_faNum,
               alignSelf: 'center',
