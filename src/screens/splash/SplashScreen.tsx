@@ -1,9 +1,8 @@
 import React, { useEffect, useLayoutEffect, useState } from 'react';
 import AuthService from '../../services/AuthService';
-import { Platform, StatusBar } from 'react-native';
+import { StatusBar } from 'react-native';
 import AppContainer from '../../components/base/app-container/AppContainer';
 import AppNavigator from '../../navigation/AppNavigator';
-import SplashAnim from './splash-anim';
 import { preloadAll } from '../../navigation/Routes';
 import ChatService from '../../services/ChatService';
 import AppImageView from '../../components/base/app-image/app-imageview';

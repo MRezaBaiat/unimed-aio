@@ -13,6 +13,7 @@
     "build:web": "expo build:web --clear --no-pwa",
     "build:web:production": "set EXPO_WEB_DEBUG=false&& set GENERATE_SOURCEMAP=false&& yarn build:web",
     "bundle:android": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res",
+    "release:android:aab": "cd android && ./gradlew bundleRelease && cd ..",
     "assembleDebug": "yarn bundle:android && cd ./android && ./gradlew app:assembleDebug && ./gradlew installDebug",
     "assemble:release:android": "cd ./android && ./gradlew app:assembleRelease",
     "assemble:staging:android": "yarn bundle:android && cd ./android && gradlew app:assembleStaging",

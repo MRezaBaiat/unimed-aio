@@ -69,7 +69,7 @@ const Row = (props: RowProps) => {
   return (
     <AppCardRow
       title={detailedTextFromType(transaction.type, transaction)}
-      subTitle={`${Kit.numbersToPersian(numberWithCommas(transaction.amount))} ${dictionary.toman[lang]}`}
+      subTitle={`${numberWithCommas(transaction.amount)} ${dictionary.toman[lang]}`}
       imageSrc={modeFromType(transaction.type, user) === 'deposit' ? R.images.icons.transactionDeposit : R.images.icons.transactionWith}
       date={transaction.createdAt}
       titleFontSize={R.fontsSize.small}

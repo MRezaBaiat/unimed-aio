@@ -24,7 +24,7 @@ export const actionSetLang = (lang: 'az' | 'en') => {
   // updateDictionaryLang(lang || 'az');
   config.saveLanguage(lang);
   ChatService.setLanguage(lang || 'az');
-  if (!lang || lang === 'az') {
+  /*if (!lang || lang === 'az') {
     R.fonts.fontFamily = 'Gilroy-Light';
     R.fonts.fontFamily_Bold = 'Gilroy-ExtraBold';
     R.fonts.fontFamily_faNum = 'Gilroy-Light';
@@ -34,7 +34,7 @@ export const actionSetLang = (lang: 'az' | 'en') => {
     R.fonts.fontFamily_Bold = 'Shabnam-Bold';
     R.fonts.fontFamily_faNum = 'Shabnam-FD';
     R.fonts.fontFamily_faNum_Bold = 'Shabnam-Bold-FD';
-  }
+  }*/
   Axios.defaults.headers.common['Accept-Language'] = lang || 'az';
   return {
     type: ACTION_SET_LANG,

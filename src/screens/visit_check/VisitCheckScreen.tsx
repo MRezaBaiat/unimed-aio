@@ -146,12 +146,12 @@ function VisitCheckScreen(props: Props) {
           </AppView>
           <AppCardView style={{ width: '70%', paddingLeft: 30, paddingRight: 30, borderRadius: 15 }}>
             <AppView style={{ width: '100%', height: 50, flexDirection: lang === 'fa' ? 'row' : 'row-reverse', alignItems: 'center', justifyContent: 'space-between', borderBottomColor: '#4E55A1', borderBottomWidth: 1 }}>
-              <AppTextView text={`${lang === 'fa' ? Kit.numbersToPersian(String(currency)) : currency} ${dictionary.toman[lang]}`} textColor={'#50BCBD'} fontSize={14} />
+              <AppTextView text={`${lang === 'fa' ? String(currency) : currency} ${dictionary.toman[lang]}`} textColor={'#50BCBD'} fontSize={14} />
               <AppTextView text={dictionary.your_credit} textColor={'#4E55A1'} fontSize={14} />
             </AppView>
 
             <AppView style={{ width: '100%', height: 50, flexDirection: lang === 'fa' ? 'row' : 'row-reverse', alignItems: 'center', justifyContent: 'space-between', borderBottomColor: '#4E55A1', borderBottomWidth: 1 }}>
-              <AppTextView text={`${lang === 'fa' ? Kit.numbersToPersian(String(payable)) : payable} ${dictionary.toman[lang]}`} textColor={'#50BCBD'} />
+              <AppTextView text={`${lang === 'fa' ? String(payable) : payable} ${dictionary.toman[lang]}`} textColor={'#50BCBD'} />
               <AppTextView text={dictionary.payable_amount} textColor={'#4E55A1'} fontSize={14} />
             </AppView>
 

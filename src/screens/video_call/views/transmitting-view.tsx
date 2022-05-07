@@ -142,7 +142,7 @@ function TransmittingView(props) {
                   marginTop: hp(3),
                 }}
                 textColor="#38488A"
-                text={Kit.numbersToPersian(name)}
+                text={name}
               />
               {/* <AppTextView
                     style={{

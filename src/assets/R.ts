@@ -17,10 +17,10 @@ export default {
     voice_visit_time_ended: require('./voice_visit_time_ended.mp3'),
   },
   fonts: {
-    fontFamily: 'Shabnam',
-    fontFamily_Bold: 'Shabnam-Bold',
-    fontFamily_faNum: 'Shabnam-FD',
-    fontFamily_faNum_Bold: 'Shabnam-Bold-FD',
+    fontFamily: 'Gilroy-Light',
+    fontFamily_Bold: 'Gilroy-ExtraBold',
+    fontFamily_faNum: 'Gilroy-Light',
+    fontFamily_faNum_Bold: 'Gilroy-ExtraBold',
   },
   fontsSize: {
     xsmall: wp(3),

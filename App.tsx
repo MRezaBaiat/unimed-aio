@@ -171,20 +171,12 @@ export default function App() {
       await Analytics.initialize();
       store.dispatch(actionSetLang(config.readLanguage()));
       await Font.loadAsync({
-        Shabnam: {
-          uri: require('./src/assets/fonts/Shabnam.ttf'),
+        'Gilroy-Light': {
+          uri: require('./src/assets/fonts/Gilroy-Light.otf'),
           display: Font.FontDisplay.BLOCK,
         },
-        'Shabnam-Bold': {
-          uri: require('./src/assets/fonts/Shabnam-Bold.ttf'),
-          display: Font.FontDisplay.BLOCK,
-        },
-        'Shabnam-FD': {
-          uri: require('./src/assets/fonts/Shabnam-FD.ttf'),
-          display: Font.FontDisplay.BLOCK,
-        },
-        'Shabnam-Bold-FD': {
-          uri: require('./src/assets/fonts/Shabnam-Bold-FD.ttf'),
+        'Gilroy-ExtraBold': {
+          uri: require('./src/assets/fonts/Gilroy-ExtraBold.otf'),
           display: Font.FontDisplay.BLOCK,
         },
       });

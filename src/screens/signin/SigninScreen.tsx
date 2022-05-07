@@ -21,8 +21,8 @@ import useLang from '../../hooks/useLang';
 
 function SigninScreen(props) {
   const [mobile, setMobile] = useState('');
-  const [preMobile, setPreMobile] = useState('98');
-  const [countryCode, setCountryCode] = useState<CountryCode>('IR');
+  const [preMobile, setPreMobile] = useState('994');
+  const [countryCode, setCountryCode] = useState<CountryCode>('AZ');
   const [modalVisible, setModalVisible] = useState(false);
   const [tcModalVisible, setTCModalVisible] = useState(false);
   const language = useLang();

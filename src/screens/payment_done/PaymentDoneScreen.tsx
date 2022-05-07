@@ -17,7 +17,7 @@ function PaymentDoneScreen(props) {
   useEffect(() => {
     Font.loadAsync({
       [R.fonts.fontFamily]: {
-        uri: require('../../assets/fonts/Shabnam.ttf'),
+        uri: require('../../assets/fonts/Gilroy-Light.otf'),
         display: Font.FontDisplay.SWAP,
       },
     });

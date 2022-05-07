@@ -358,7 +358,7 @@ function DoctorProfileScreen(props) {
                     width: wp(65),
                     lineHeight: hp(3.5),
                   }}
-                  text={`هزینه : ${Kit.numbersToPersian(doctorData.details.reservationInfo.cost)} تومان`}
+                  text={`هزینه : ${doctorData.details.reservationInfo.cost} تومان`}
                 />
               )}
             </AppView>

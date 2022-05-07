@@ -187,7 +187,8 @@ export const formatDate = (date: string) => {
 };
 
 export const formatDateShamsi = (date: string) => {
-  return Kit.numbersToPersian(smartDate(date).formatJalali('HH:mm - YYYY/M/D'));
+  return smartDate(date).formatGregorian('HH:mm - YYYY/M/D');
+  // return Kit.numbersToPersian(smartDate(date).formatJalali('HH:mm - YYYY/M/D'));
 };
 
 export const numberWithCommas = (number) => {

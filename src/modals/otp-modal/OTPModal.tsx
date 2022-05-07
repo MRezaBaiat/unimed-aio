@@ -12,6 +12,7 @@ import AppTextView from '../../components/base/app-text-view/AppTextView';
 import AppTouchable from '../../components/base/app-touchable/AppTouchable';
 import OTPView from '../../components/composite/otp-view/OTPView';
 import AppModal from '../../components/base/app-modal/AppModal';
+import useLang from '../../hooks/useLang';
 
 interface Props {
   onResend: () => void;
@@ -24,6 +25,7 @@ function OTPModal(props: Props) {
   const [code, setCode] = useState();
   const [codeError, setCodeError] = useState(false);
   const [seconds, setSeconds] = useState(60);
+  const lang = useLang();
   useEffect(() => {
     if (seconds > 0) {
       setTimeout(() => {
@@ -88,7 +90,7 @@ function OTPModal(props: Props) {
               }}
               textColor="#50BCBD"
               fontSize={wp(3.8)}
-              text={`${dictionary['تغییر شماره']} ${mobile}`}
+              text={`${dictionary['تغییر شماره'][lang]} ${mobile}`}
             />
           </AppTouchable>
         )}
@@ -136,7 +138,7 @@ function OTPModal(props: Props) {
         </AppTouchable>
         {seconds !== 0 && (
           <AppTextView
-            text={`${String(seconds)}  ${dictionary.seconds_until_resubmission}`}
+            text={`${String(seconds)}  ${dictionary.seconds_until_resubmission[lang]}`}
             style={{
               fontFamily: R.fonts.fontFamily_faNum,
               alignSelf: 'center',
