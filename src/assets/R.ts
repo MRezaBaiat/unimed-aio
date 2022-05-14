@@ -4,7 +4,6 @@ import { StyleProp, ViewProps, ViewStyle } from 'react-native';
 export default {
   colors: require('./colors/colors').default,
   images: require('./images/images').default,
-  strings: require('./strings/strings').default,
   animations: {
     caller_pulse: require('./AnimateJSONS/caller_pulse.json'),
     queue_anim: require('./AnimateJSONS/queue_anim.json'),

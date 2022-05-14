@@ -1125,6 +1125,10 @@ const dictionary = {
     fa: 'تا',
     az: 'qədər',
   },
+  'کد تخفیف اشتباه می‌باشد': {
+    en: 'The discount code is wrong',
+    az: 'Endirim kodunuz səhvdir',
+  },
   'ساعات پاسخگوئی آنلاین': {
     en: 'Online response hours',
     fa: 'ساعات پاسخگوئی آنلاین',

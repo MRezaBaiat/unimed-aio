@@ -89,7 +89,7 @@ function VisitCheckScreen(props: Props) {
           const { error, amount } = res.data;
           if (!amount) {
             Keyboard.dismiss();
-            ToastMaster.makeText('کد تخفیف اشتباه می‌باشد');
+            ToastMaster.makeText(dictionary['کد تخفیف اشتباه می‌باشد']);
             setDiscountAmount(amount || 0);
             setDiscountCode('');
           }
